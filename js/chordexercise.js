@@ -14,7 +14,7 @@ var streak = 0;
 var incorrect = 0;
 var total = 0;
 
-var timer = 30;
+var timer = 1000000;
 var interval = setInterval(function () {
     document.getElementById('count').innerHTML = timer;
 
