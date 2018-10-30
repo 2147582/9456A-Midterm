@@ -2,14 +2,6 @@ body, html {
   height: 100%;
 }
 
-.container {
-  height: 10%;
-  align-content: center;
-}
-
-.nav-bar {
-  position: static;
-}
 #first {
   background-image: url(../img/guitarist.jpeg);
   height: 1000px;
