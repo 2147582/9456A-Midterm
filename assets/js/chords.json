@@ -9,6 +9,7 @@
         {
             "name": "A",
             "type": "m",
+            "fret": 0,
             "placement": ["x", 0, 2, 2, 1, 0],
             "fingering": ["x", 0, 2, 3, 1, 0]
         }
