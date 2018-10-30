@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 body, html {
   height: 100%;
 }
@@ -9,7 +8,7 @@ body, html {
 }
 
 .nav-bar {
-  position: static; 
+  position: static;
 }
 #first {
   background-image: url(../img/guitarist.jpeg);
@@ -38,8 +37,4 @@ body, html {
 
 img {
     background-position: -10px
-=======
-img [intro]{    
-    border-radius: 90%;
->>>>>>> 579894435fd0572b38bd3d6293de0a02eff16304
 }
