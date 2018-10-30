@@ -1,17 +1,339 @@
 {
-    "list": [{
-            "name": "G",
-            "type": "",
-            "fret": 5,
-            "placement": [1, 3, 3, 2, 0, 1],
-            "fingering": [1, 4, 3, 2, 0, 1]
-        },
-        {
-            "name": "A",
-            "type": "m",
-            "fret": 0,
-            "placement": ["x", 0, 2, 2, 1, 0],
-            "fingering": ["x", 0, 2, 3, 1, 0]
-        }
-    ]
+  "list": [{
+      "name": "A",
+      "type": "",
+      "fret": 0,
+      "placement": ["x", 0, 2, 2, 2, 0],
+      "fingering": ["x", 0, 1, 2, 3, 0]
+    },
+    {
+      "name": "A",
+      "type": "m",
+      "fret": 0,
+      "placement": ["x", 0, 2, 2, 1, 0],
+      "fingering": ["x", 0, 2, 3, 1, 0]
+    },
+    {
+      "name": "A",
+      "type": "7",
+      "fret": 0,
+      "placement": ["x", 0, 2, 0, 2, 0],
+      "fingering": ["x", 0, 1, 0, 2, 0]
+    },
+    {
+      "name": "A",
+      "type": "m7",
+      "fret": 0,
+      "placement": ["x", 0, 2, 0, 1, 0],
+      "fingering": ["x", 0, 2, 0, 1, 0]
+    },
+    {
+      "name": "B",
+      "type": "",
+      "fret": 2,
+      "placement": [1, 1, 3, 3, 3, 1],
+      "fingering": [1, 1, 2, 3, 4, 1]
+    },
+    {
+      "name": "B",
+      "type": "m",
+      "fret": 2,
+      "placement": [1, 1, 3, 3, 2, 1],
+      "fingering": [1, 1, 3, 4, 2, 1]
+    },
+    {
+      "name": "B",
+      "type": "m7",
+      "fret": 0,
+      "placement": [2, 2, 4, 0, 3, 2],
+      "fingering": [1, 1, 3, 0, 2, 1]
+    },
+    {
+      "name": "B",
+      "type": "7",
+      "fret": 2,
+      "placement": [1, 1, 3, 1, 3, 1],
+      "fingering": [1, 1, 3, 1, 4, 1]
+    },
+    {
+      "name": "C",
+      "type": "",
+      "fret": 0,
+      "placement": ["x", 3, 2, 0, 1, 3],
+      "fingering": ["x", 3, 2, 0, 1, 0]
+    },
+    {
+      "name": "C",
+      "type": "m",
+      "fret": 3,
+      "placement": ["x", 1, 3, 3, 2, 1],
+      "fingering": ["x", 1, 3, 4, 2, 1]
+    },
+    {
+      "name": "C",
+      "type": "m7",
+      "fret": 3,
+      "placement": ["x", 1, 3, 0, 2, 1],
+      "fingering": ["x", 1, 3, 0, 2, 1]
+    },
+    {
+      "name": "C",
+      "type": "7",
+      "fret": 3,
+      "placement": ["x", 1, 3, 1, 3, 1],
+      "fingering": ["x", 1, 3, 1, 4, 1]
+    },
+    {
+      "name": "D",
+      "type": "",
+      "fret": 0,
+      "placement": ["x", "x", 0, 2, 3, 2],
+      "fingering": ["x", "x", 0, 1, 3, 2]
+    },
+    {
+      "name": "D",
+      "type": "m",
+      "fret": 0,
+      "placement": ["x", "x", 0, 2, 3, 1],
+      "fingering": ["x", "x", 0, 2, 3, 1]
+    },
+    {
+      "name": "D",
+      "type": "m7",
+      "fret": 0,
+      "placement": ["x", "x", 0, 2, 1, 1],
+      "fingering": ["x", "x", 0, 2, 1, 1]
+    },
+    {
+      "name": "D",
+      "type": "7",
+      "fret": 0,
+      "placement": ["x", "x", 0, 2, 1, 2],
+      "fingering": ["x", "x", 0, 2, 1, 3]
+    },
+    {
+      "name": "E",
+      "type": "",
+      "fret": 0,
+      "placement": ["x", 2, 2, 1, 0, "x"],
+      "fingering": ["x", 2, 3, 1, 0, "x"]
+    },
+    {
+      "name": "E",
+      "type": "m",
+      "fret": 0,
+      "placement": [0, 2, 2, 0, 0, 0],
+      "fingering": [0, 1, 2, 0, 0, 0]
+    },
+    {
+      "name": "E",
+      "type": "m7",
+      "fret": 0,
+      "placement": [0, 2, 0, 0, 0, 0],
+      "fingering": [0, 1, 0, 0, 0, 0]
+    },
+    {
+      "name": "E",
+      "type": "7",
+      "fret": 0,
+      "placement": [0, 2, 0, 1, 0, 0],
+      "fingering": [0, 2, 0, 1, 0, 0]
+    },
+    {
+      "name": "F",
+      "type": "",
+      "fret": 0,
+      "placement": [1, 3, 3, 2, 1, 1],
+      "fingering": [1, 3, 4, 2, 1, 1]
+    },
+    {
+      "name": "F",
+      "type": "m",
+      "fret": 0,
+      "placement": [1, 3, 3, 1, 1, 1],
+      "fingering": [1, 3, 4, 1, 1, 1]
+    },
+    {
+      "name": "F",
+      "type": "m7",
+      "fret": 0,
+      "placement": [1, 3, 1, 1, 1, 1],
+      "fingering": [1, 3, 1, 1, 1, 1]
+    },
+    {
+      "name": "F",
+      "type": "7",
+      "fret": 0,
+      "placement": [1, 3, 1, 2, 1, 1],
+      "fingering": [1, 3, 1, 2, 1, 1]
+    },
+    {
+      "name": "G",
+      "type": "m",
+      "fret": 3,
+      "placement": [1, 3, 3, 1, 1, 1],
+      "fingering": [1, 3, 4, 1, 1, 1]
+    },
+    {
+      "name": "G",
+      "type": "",
+      "fret": 0,
+      "placement": [3, 2, 0, 0, 3, 3],
+      "fingering": [2, 1, 0, 0, 3, 4]
+    },
+    {
+      "name": "G",
+      "type": "m7",
+      "fret": 3,
+      "placement": [1, 3, 1, 1, 1, 1],
+      "fingering": [1, 3, 1, 1, 1, 1]
+    },
+    {
+      "name": "G",
+      "type": "7",
+      "fret": 3,
+      "placement": [1, 3, 1, 2, 1, 1],
+      "fingering": [1, 3, 1, 2, 1, 1]
+    },
+    {
+      "name": "A",
+      "type": "#",
+      "fret": 0,
+      "placement": ["x", 1, 3, 3, 3, 1],
+      "fingering": ["x", 1, 2, 3, 4, 1]
+    },
+    {
+      "name": "A",
+      "type": "#m",
+      "fret": 0,
+      "placement": ["x", 1, 3, 3, 2, 1],
+      "fingering": ["x", 1, 3, 4, 2, 1]
+    },
+    {
+      "name": "A",
+      "type": "#m7",
+      "fret": 0,
+      "placement": ["x", 1, 3, 1, 2, 1],
+      "fingering": ["x", 1, 3, 1, 2, 1]
+    },
+    {
+      "name": "A",
+      "type": "#7",
+      "fret": 0,
+      "placement": ["x", 1, 3, 1, 3, 1],
+      "fingering": ["x", 1, 3, 1, 4, 1]
+    },
+    {
+      "name": "C",
+      "type": "#",
+      "fret": 4,
+      "placement": ["x", 1, 3, 3, 3, 1],
+      "fingering": ["x", 1, 2, 3, 4, 1]
+    },
+    {
+      "name": "C",
+      "type": "#m",
+      "fret": 4,
+      "placement": ["x", 1, 3, 3, 2, 1],
+      "fingering": ["x", 1, 3, 4, 2, 1]
+    },
+    {
+      "name": "C",
+      "type": "#7",
+      "fret": 4,
+      "placement": ["x", 1, 3, 1, 2, 1],
+      "fingering": ["x", 1, 3, 1, 2, 1]
+    },
+    {
+      "name": "C",
+      "type": "#m7",
+      "fret": 4,
+      "placement": ["x", 1, 3, 1, 2, 1],
+      "fingering": ["x", 1, 3, 1, 2, 1]
+    },
+    {
+      "name": "D",
+      "type": "#",
+      "fret": 6,
+      "placement": ["x", 1, 3, 3, 3, 1],
+      "fingering": ["x", 1, 2, 3, 4, 1]
+    },
+    {
+      "name": "D",
+      "type": "#m",
+      "fret": 6,
+      "placement": ["x", 1, 3, 3, 2, 1],
+      "fingering": ["x", 1, 3, 4, 2, 1]
+    },
+    {
+      "name": "D",
+      "type": "#m7",
+      "fret": 6,
+      "placement": ["x", 1, 3, 1, 2, 1],
+      "fingering": ["x", 1, 3, 1, 2, 1]
+    },
+    {
+      "name": "D",
+      "type": "#7",
+      "fret": 6,
+      "placement": ["x", 1, 3, 1, 3, 1],
+      "fingering": ["x", 1, 3, 1, 4, 1]
+    },
+    {
+      "name": "F",
+      "type": "#",
+      "fret": 2,
+      "placement": [1, 3, 3, 2, 1, 1],
+      "fingering": [1, 3, 4, 2, 1, 1]
+    },
+    {
+      "name": "F",
+      "type": "#m",
+      "fret": 2,
+      "placement": [1, 3, 3, 1, 1, 1],
+      "fingering": [1, 3, 4, 1, 1, 1]
+    },
+    {
+      "name": "F",
+      "type": "#m7",
+      "fret": 2,
+      "placement": [1, 3, 1, 1, 1, 1],
+      "fingering": [1, 3, 1, 1, 1, 1]
+    },
+    {
+      "name": "F",
+      "type": "#7",
+      "fret": 2,
+      "placement": [1, 3, 1, 2, 1, 1],
+      "fingering": [1, 3, 1, 2, 1, 1]
+    },
+    {
+      "name": "G",
+      "type": "#",
+      "fret": 4,
+      "placement": [1, 3, 3, 2, 1, 1],
+      "fingering": [1, 3, 4, 2, 1, 1]
+    },
+    {
+      "name": "G",
+      "type": "#m",
+      "fret": 4,
+      "placement": [1, 3, 3, 1, 1, 1],
+      "fingering": [1, 3, 4, 1, 1, 1]
+    },
+    {
+      "name": "G",
+      "type": "#m7",
+      "fret": 4,
+      "placement": [1, 3, 1, 1, 1, 1],
+      "fingering": [1, 3, 1, 1, 1, 1]
+    },
+    {
+      "name": "G",
+      "type": "#7",
+      "fret": 4,
+      "placement": [1, 3, 1, 2, 1, 1],
+      "fingering": [1, 3, 1, 2, 1, 1]
+    }
+  ]
 }

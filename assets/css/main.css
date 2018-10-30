@@ -1,3 +1,32 @@
-img [intro]{    
-    border-radius: 90%;
+body, html {
+  height: 100%;
+}
+
+#first {
+  background-image: url(../img/guitarist.jpeg);
+  height: 1000px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+#second {
+  background-image: url(../img/wallpaper.jpg);
+  height: 1000px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+#third {
+  background-image: url(../img/guitarist2.jpeg);
+  height: 1000px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+img {
+    background-position: -10px
 }
