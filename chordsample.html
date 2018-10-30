@@ -12,7 +12,8 @@
 </head>
 
 <body>
-    <canvas id="canvas" width="180" height="130"></canvas>
+    <canvas class="chord" chord="G" width="180" height="150"></canvas>
+    <canvas class="chord" chord="Am" width="180" height="150"></canvas>
 
     <script src="assets/js/popper.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
@@ -24,7 +25,11 @@
         $.getJSON("assets/js/chords.json", function (data) {
             chords = data;
         }).then(function () {
-            drawChord('G', 'canvas', chords);
+            $('.chord').each(function () {
+                var chord = $(this).attr('chord');
+                drawChord(chord, this, chords);
+            })
+
         });
     </script>
 </body>
