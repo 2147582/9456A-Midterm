@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Online Guitar Tutorial</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="assets/css/main.css" />
+
+  <script src="assets/js/jquery-3.3.1.min.js"></script>
+</head>
+
+<body>
+  <canvas class="chord" chord="A" width="180" height="200"></canvas>
+  <canvas class="chord" chord="Am" width="180" height="200"></canvas>
+  <canvas class="chord" chord="Am7" width="180" height="200"></canvas>
+  <canvas class="chord" chord="A7" width="180" height="200"></canvas>
+  <canvas class="chord" chord="B" width="180" height="200"></canvas>
+  <canvas class="chord" chord="Bm" width="180" height="200"></canvas>
+  <canvas class="chord" chord="Bm7" width="180" height="200"></canvas>
+  <canvas class="chord" chord="B7" width="180" height="200"></canvas>
+  <canvas class="chord" chord="C" width="180" height="200"></canvas>
+  <canvas class="chord" chord="Cm" width="180" height="200"></canvas>
+  <canvas class="chord" chord="Cm7" width="180" height="200"></canvas>
+  <canvas class="chord" chord="C7" width="180" height="200"></canvas>
+  <canvas class="chord" chord="D" width="180" height="200"></canvas>
+  <canvas class="chord" chord="Dm" width="180" height="200"></canvas>
+  <canvas class="chord" chord="Dm7" width="180" height="200"></canvas>
+  <canvas class="chord" chord="D7" width="180" height="200"></canvas>
+  <canvas class="chord" chord="E" width="180" height="200"></canvas>
+  <canvas class="chord" chord="Em" width="180" height="200"></canvas>
+  <canvas class="chord" chord="Em7" width="180" height="200"></canvas>
+  <canvas class="chord" chord="E7" width="180" height="200"></canvas>
+  <canvas class="chord" chord="F" width="180" height="200"></canvas>
+  <canvas class="chord" chord="Fm" width="180" height="200"></canvas>
+  <canvas class="chord" chord="Fm7" width="180" height="200"></canvas>
+  <canvas class="chord" chord="F7" width="180" height="200"></canvas>
+  <canvas class="chord" chord="A#" width="180" height="200"></canvas>
+  <canvas class="chord" chord="A#m" width="180" height="200"></canvas>
+  <canvas class="chord" chord="A#m7" width="180" height="200"></canvas>
+  <canvas class="chord" chord="A#7" width="180" height="200"></canvas>
+  <canvas class="chord" chord="C#" width="180" height="200"></canvas>
+  <canvas class="chord" chord="C#m" width="180" height="200"></canvas>
+  <canvas class="chord" chord="C#m7" width="180" height="200"></canvas>
+  <canvas class="chord" chord="C#7" width="180" height="200"></canvas>
+  <canvas class="chord" chord="D#" width="180" height="200"></canvas>
+  <canvas class="chord" chord="D#m" width="180" height="200"></canvas>
+  <canvas class="chord" chord="D#m7" width="180" height="200"></canvas>
+  <canvas class="chord" chord="D#7" width="180" height="200"></canvas>
+  <canvas class="chord" chord="F#" width="180" height="200"></canvas>
+  <canvas class="chord" chord="F#m" width="180" height="200"></canvas>
+  <canvas class="chord" chord="F#m7" width="180" height="200"></canvas>
+  <canvas class="chord" chord="F#7" width="180" height="200"></canvas>
+  <canvas class="chord" chord="G#" width="180" height="200"></canvas>
+  <canvas class="chord" chord="G#m" width="180" height="200"></canvas>
+  <canvas class="chord" chord="G#m7" width="180" height="200"></canvas>
+  <canvas class="chord" chord="G#7" width="180" height="200"></canvas>
+
+  <script src="assets/js/popper.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/drawchord.js"></script>
+  <script>
+    var chords;
+
+    //get json from root directory/js/chords.json
+    $.getJSON("assets/js/chords.json", function(data) {
+      chords = data;
+    }).then(function() {
+      $('.chord').each(function() {
+        var chord = $(this).attr('chord');
+        drawChord(chord, this, chords);
+      })
+
+    });
+  </script>
+</body>
+
+</html>
