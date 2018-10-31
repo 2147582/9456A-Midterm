@@ -38,7 +38,7 @@ function drawChord(chordName, canvas, arr = chords) {
     for (f = minPos; f <= maxPos + 1; f++) {
         ctx.beginPath();
 
-        if (f == 0) {
+        if (f == 0 && chord.fret == 0) {
             ctx.lineWidth = 4;
         } else {
             ctx.lineWidth = 1;
@@ -72,8 +72,10 @@ function drawChord(chordName, canvas, arr = chords) {
         ctx.lineTo(offsetX + stringWidth, 20 + stringH + fretHeight);
 
         ctx.fillStyle = 'black';
-        ctx.fillText(chord.fingering[i], x, y + 20);
-
+        if (chord.fret != 0 && chord.fingering[i] != 0){
+            ctx.fillText(chord.fingering[i], x, y + 20);
+        }
+        
         ctx.stroke();
 
         if (i == chord.placement.length - 1 && chord.fret != 0) {
