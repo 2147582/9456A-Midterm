@@ -2,7 +2,12 @@ body, html {
   height: 100%;
 }
 
-
+pre {
+  background-color: rgb(91,171,118);
+  border-radius: 10px;
+  margin: 3% 2%;
+  padding: 3% 0;
+}
 .chords  {
   display: inline-block;
   position: relative;
@@ -11,6 +16,7 @@ body, html {
   left: 0;
   font-weight: bold;
 }
+
 
 #first {
   background-image: url(../img/guitarist.jpeg);
