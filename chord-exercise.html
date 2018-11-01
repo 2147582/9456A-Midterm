@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<script src="./assets/js/jquery-3.3.1.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/popper.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
+	<title>Web Systems and Technologies: Guitar Tutorial</title>
+	<script src="assets/js/drawchord.js"></script>
+	<style>
+		.exercise-container{min-height: 500px;}
+		.exercise-start{width: 100%; }
+		.exercise{width: 100%; display: none;}
+	</style>
+</head>
+
+<body>
+
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-md-6">
+				<img src="assets/img/cover.jpg" style="height: 500px; width: 600px">
+				<h1 style="text-align: center; padding: 5%;"> Guitar Tutorial</h1>
+			</div>
+
+		</div>
+		<!-- <img src="assets/img/cover.jpg" style="height: 300px; width: 600px;"> -->
+	</div>
+
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<a class="navbar-brand" href="#">Guitar Tutorial</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+		 aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNavDropdown">
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="introduction.html">Introduction</a>
+				</li>
+				<li class="nav-item dropdown active">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+					 aria-expanded="false">
+						Chords
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+						<a class="dropdown-item" href="guitar-chord.html">Diagram</a>
+						<a class="dropdown-item" href="guitar-exercises.html">Guitar Exercises</a>
+						<a class="dropdown-item" href="chord-exercise.html">Chord Exercises</a>
+						<a class="dropdown-item" href="audio-exercise.html">Audio Exercises</a>
+					</div>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="about.html">About</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<div class="container">
+		<h2 style="text-align: center;padding: 5%"> Chord Exercise </h2>
+		<div class="row justify-content-center">
+
+			<div class="col-lg-12" style="padding: 5%;">
+				<div class="card" style="width: 60%; margin: auto;">
+					<h3 class="card-header">Identify the chord</h3>
+					<div class="card-body exercise-container">
+
+						<div class="exercise-start">
+							<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo, odio? Officia rem porro odit unde minus
+								temporibus excepturi beatae commodi modi, ut, ducimus dolor assumenda doloribus reprehenderit labore doloremque
+								amet?</p>
+							<a id="next" class="btn btn-primary float-right">Next</a>
+						</div>
+						<div class="exercise">
+							<div id="notifier">
+								
+							</div>
+							<div class="mx-auto">
+								<div id="exercise-container">
+									<div class="row" style="font-size: 1.5em;">
+										<div class="col-sm-6">Score</div>
+										<div class="col-sm-6">Time</div>
+									</div>
+									<div class="row" style="font-size: 1.1em">
+										<div id="score" class="col-sm-6">0</div>
+										<div id="count" class="col-sm-6">30</div>
+									</div>
+									<div class="row" style="padding-top: 20px;">
+										<div class="col-sm-12">
+											<div id="question" class="text-center" style="padding-left: 40px;"></div>
+										</div>
+									</div>
+
+									<div class="row">
+
+										<div class="col-sm-6" style="margin: 5px 0;">
+											<button id="answerA" class="btn btn-primary" onclick="answerA_clicked()" style="width: 100%"></button>
+										</div>
+										<div class="col-sm-6" style="margin: 5px 0;">
+											<button id="answerB" class="btn btn-primary" onclick="answerB_clicked()" style="width: 100%"></button>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-6" style="margin: 5px 0;">
+											<button id="answerC" class="btn btn-primary" onclick="answerC_clicked()" style="width: 100%"></button>
+										</div>
+										<div class="col-sm-6" style="margin: 5px 0;">
+											<button id="answerD" class="btn btn-primary" onclick="answerD_clicked()" style="width: 100%"></button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<!-- <img src="assets/img/cover.jpg" style="height: 300px; width: 600px;"> -->
+	</div>
+
+	<!-- modal start exercise -->
+	<div id="startExercise" class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="startExercise"
+	 aria-hidden="true">
+		<div class="modal-dialog modal-sm">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Prompt</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<p>You're exercise is about to start. Just click on start when you are ready.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" onclick="startTimer();" data-dismiss="modal">Start</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- modal score -->
+	<div id="scoreModal" class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="scoreModal"
+	 aria-hidden="true">
+		<div class="modal-dialog modal-sm">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Results</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div id="scoreResult"></div>
+					<div id="accuracy"></div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" onclick="window.location = '/';" data-dismiss="modal">Ok</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		$('#next').click(function (e) {
+			e.preventDefault();
+
+			$(".exercise-start").delay(1000).fadeOut();
+			$(".exercise").delay(1500).fadeIn();
+			$("#startExercise").modal('toggle');
+		});
+	</script>
+	<script src="assets/js/chordexercise.js"></script>
+</body>
+
+</html>
