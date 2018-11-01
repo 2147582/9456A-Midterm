@@ -10,6 +10,12 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
 	<title>Web Systems and Technologies: Guitar Tutorial</title>
+	<script src="assets/js/drawchord.js"></script>
+	<style>
+		.exercise-container{overflow: hidden; height: 500px;}
+		.exercise-start{width: 100%; }
+		.exercise{width: 100%; display: none;}
+	</style>
 </head>
 
 <body>
@@ -59,54 +65,73 @@
 	</nav>
 
 	<div class="container">
-		<h2 style="text-align: center;padding: 5%"> Guitar Exercises </h2>
+		<h2 style="text-align: center;padding: 5%"> Chord Exercise </h2>
 		<div class="row justify-content-center">
 
-
 			<div class="col-lg-12" style="padding: 5%;">
-				<div class="row">
-					<div class="col-lg-4 col-md-6 col-sm-12" style="padding-right: 5%; padding-bottom: 5%">
-						<div class="card">
-							<img class="card-img-top" src="assets/img/tab.jpeg" alt="Card image cap">
-							<div class="card-body">
-								<h3 class="card-title">Chord Exercise</h3>
-								<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-									content.</p>
-								<a href="#" class="btn btn-primary" style="width: 100%">Play</a>
-							</div>
+				<div class="card">
+					<h3 class="card-header">Identify the chord</h3>
+					<div class="card-body exercise-container">
+
+						<div class="exercise-start">
+							<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo, odio? Officia rem porro odit unde minus
+								temporibus excepturi beatae commodi modi, ut, ducimus dolor assumenda doloribus reprehenderit labore doloremque
+								amet?</p>
+							<a id="next" class="btn btn-primary float-right">Next</a>
 						</div>
-					</div>
-					<div class="col-lg-4 col-md-6 col-sm-12" style="padding-right: 5%; padding-bottom: 5%">
-						<div class="card">
-							<img class="card-img-top" src="assets/img/tab.jpeg" alt="Card image cap">
-							<div class="card-body">
-								<h3 class="card-title">Audio Exercise</h3>
-								<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-									content.</p>
-								<a href="#" class="btn btn-primary" style="width: 100%">Play</a>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-6 col-sm-12" style="padding-right: 5%; padding-bottom: 5%">
-						<div class="card">
-							<img class="card-img-top" src="assets/img/tab.jpeg" alt="Card image cap">
-							<div class="card-body">
-								<h3 class="card-title">Practice Songs</h3>
-								<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-									content.</p>
-								<a href="#" class="btn btn-primary" style="width: 100%">Play</a>
+						<div class="exercise">
+							<div class="mx-auto">
+								<div id="exercise-container">
+									<div class="row" style="font-size: 1.5em; padding-top: 20px;">
+										<div class="col-sm-6">Score</div>
+										<div class="col-sm-6">Time</div>
+									</div>
+									<div class="row" style="font-size: 1.1em">
+										<div id="score" class="col-sm-6">0</div>
+										<div id="count" class="col-sm-6">30</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-12">
+											<div id="question"></div>
+										</div>
+									</div>
+
+									<div class="row">
+
+										<div class="col-sm-6" style="margin: 5px 0;">
+											<button id="answerA" class="btn btn-primary" onclick="answerA_clicked()" style="width: 100%"></button>
+										</div>
+										<div class="col-sm-6" style="margin: 5px 0;">
+											<button id="answerB" class="btn btn-primary" onclick="answerB_clicked()" style="width: 100%"></button>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-6" style="margin: 5px 0;">
+											<button id="answerC" class="btn btn-primary" onclick="answerC_clicked()" style="width: 100%"></button>
+										</div>
+										<div class="col-sm-6" style="margin: 5px 0;">
+											<button id="answerD" class="btn btn-primary" onclick="answerD_clicked()" style="width: 100%"></button>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-
 			</div>
-
 
 		</div>
 		<!-- <img src="assets/img/cover.jpg" style="height: 300px; width: 600px;"> -->
 	</div>
+	<script>
+		$('#next').click(function (e) {
+			e.preventDefault();
 
+			$(".exercise-start").delay(1000).fadeOut();
+			$(".exercise").delay(2000).fadeIn();
+		});
+	</script>
+	<script src="assets/js/chordexercise.js"></script>
 </body>
 
 </html>
