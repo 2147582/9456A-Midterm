@@ -15,26 +15,22 @@ var incorrect = 0;
 var total = 0;
 
 var timer = 30;
-var interval = setInterval(function () {
-    document.getElementById('count').innerHTML = timer;
 
-    if (timer === 0) {
-        clearInterval(interval);
-        document.getElementById('count').innerHTML = 'Done';
+function startTimer() {
+    var interval = setInterval(function () {
+        document.getElementById('count').innerHTML = timer;
 
-        $("[data-clipped-circle-graph]").each(function () {
-            var $graph = $(this),
-                percent = parseInt($graph.data('percent'), 10),
-                deg = 30 + (300 * percent) / 100;
-            if (percent > 50) {
-                $graph.addClass('gt-50');
-            }
-            $graph.find('.clipped-circle-graph-progress-fill').css('transform', 'rotate(' + deg + 'deg)');
-            $graph.find('.clipped-circle-graph-percents-number').html(percent + '%');
-        });
-    }
-    timer--;
-}, 1000);
+        if (timer === 0) {
+            clearInterval(interval);
+            document.getElementById('count').innerHTML = 'Done';
+            $('#scoreResult').html('<b>Score</b>: ' + currentScore);
+            $('#accuracy').html('<b>Accuracy</b>: ' + (((total - incorrect) / total) * 100).toFixed(2));
+            $('#scoreModal').modal('toggle');
+
+        }
+        timer--;
+    }, 1000);
+}
 
 document.addEventListener("DOMContentLoaded", function (event) {
     btnProvideQuestion();
@@ -78,7 +74,7 @@ function btnProvideQuestion() {
     }).then(function () {
         $('.chord').each(function () {
             var chord = $(this).attr('chord');
-            drawChord(chord, this, chords);
+            drawBlankChord(chord, this, chords);
         })
 
     });
@@ -127,20 +123,15 @@ function checkAnswer(answer) {
     if (answer == randomQuestion.rightAnswer) {
         adjustScore(true);
         btnProvideQuestion();
-        alertify.set('notifier', 'delay', '3');
-        alertify.set('notifier', 'position', 'top-right');
-        alertify.success('Correct <b>+1</b>');
+        $('#notifier').html('<div class="alert alert-success" role="alert">Correct <b>+1</b></div>');
 
         if (streak === 3) {
             timer += 3;
             streak = 0;
-            alertify.success('Time Bonus <b>+3</b>');
+            $('#notifier').html('<div class="alert alert-success" role="alert">Time Bonus <b>+3</b></div>');
         }
-        jtab.render($('#question'));
     } else {
-        alertify.set('notifier', 'delay', '3');
-        alertify.set('notifier', 'position', 'top-right');
-        alertify.error('Wrong <b>-1</b>');
+        $('#notifier').html('<div class="alert alert-danger" role="alert">Wrong <b>-1</b></div>');
         adjustScore(false);
     }
 }

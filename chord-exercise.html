@@ -12,7 +12,7 @@
 	<title>Web Systems and Technologies: Guitar Tutorial</title>
 	<script src="assets/js/drawchord.js"></script>
 	<style>
-		.exercise-container{overflow: hidden; height: 500px;}
+		.exercise-container{min-height: 500px;}
 		.exercise-start{width: 100%; }
 		.exercise{width: 100%; display: none;}
 	</style>
@@ -69,7 +69,7 @@
 		<div class="row justify-content-center">
 
 			<div class="col-lg-12" style="padding: 5%;">
-				<div class="card">
+				<div class="card" style="width: 60%; margin: auto;">
 					<h3 class="card-header">Identify the chord</h3>
 					<div class="card-body exercise-container">
 
@@ -80,9 +80,12 @@
 							<a id="next" class="btn btn-primary float-right">Next</a>
 						</div>
 						<div class="exercise">
+							<div id="notifier">
+								
+							</div>
 							<div class="mx-auto">
 								<div id="exercise-container">
-									<div class="row" style="font-size: 1.5em; padding-top: 20px;">
+									<div class="row" style="font-size: 1.5em;">
 										<div class="col-sm-6">Score</div>
 										<div class="col-sm-6">Time</div>
 									</div>
@@ -90,9 +93,9 @@
 										<div id="score" class="col-sm-6">0</div>
 										<div id="count" class="col-sm-6">30</div>
 									</div>
-									<div class="row">
+									<div class="row" style="padding-top: 20px;">
 										<div class="col-sm-12">
-											<div id="question"></div>
+											<div id="question" class="text-center" style="padding-left: 40px;"></div>
 										</div>
 									</div>
 
@@ -123,12 +126,57 @@
 		</div>
 		<!-- <img src="assets/img/cover.jpg" style="height: 300px; width: 600px;"> -->
 	</div>
+
+	<!-- modal start exercise -->
+	<div id="startExercise" class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="startExercise"
+	 aria-hidden="true">
+		<div class="modal-dialog modal-sm">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Prompt</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<p>You're exercise is about to start. Just click on start when you are ready.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" onclick="startTimer();" data-dismiss="modal">Start</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- modal score -->
+	<div id="scoreModal" class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="scoreModal"
+	 aria-hidden="true">
+		<div class="modal-dialog modal-sm">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Results</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div id="scoreResult"></div>
+					<div id="accuracy"></div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" onclick="window.location = '/';" data-dismiss="modal">Ok</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<script>
 		$('#next').click(function (e) {
 			e.preventDefault();
 
 			$(".exercise-start").delay(1000).fadeOut();
-			$(".exercise").delay(2000).fadeIn();
+			$(".exercise").delay(1500).fadeIn();
+			$("#startExercise").modal('toggle');
 		});
 	</script>
 	<script src="assets/js/chordexercise.js"></script>
