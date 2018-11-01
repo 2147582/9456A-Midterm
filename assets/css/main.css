@@ -2,6 +2,16 @@ body, html {
   height: 100%;
 }
 
+
+.chords  {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  top: -1.3em;
+  left: 0;
+  font-weight: bold;
+}
+
 #first {
   background-image: url(../img/guitarist.jpeg);
   height: 1000px;
@@ -10,6 +20,7 @@ body, html {
   background-attachment: fixed;
   background-size: cover;
 }
+
 #second {
   background-image: url(../img/wallpaper.jpg);
   height: 1000px;
@@ -18,6 +29,7 @@ body, html {
   background-attachment: fixed;
   background-size: cover;
 }
+
 #third {
   background-image: url(../img/guitarist2.jpeg);
   height: 1000px;
@@ -28,5 +40,5 @@ body, html {
 }
 
 img {
-    background-position: -10px
+  background-position: -10px
 }

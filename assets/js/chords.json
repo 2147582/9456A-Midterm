@@ -334,6 +334,90 @@
       "fret": 4,
       "placement": [1, 3, 1, 2, 1, 1],
       "fingering": [1, 3, 1, 2, 1, 1]
-    }
+    },
+    {
+      "name": "A",
+      "type": "add9",
+      "fret": 5,
+      "placement": ["x", "x", 3, 2, 1, 3],
+      "fingering": ["x", "x", 3, 2, 1, 4]
+    },
+    {
+      "name": "A",
+      "type": "#add9",
+      "fret": 6,
+      "placement": ["x", "x", 3, 2, 1, 3],
+      "fingering": ["x", "x", 3, 2, 1, 4]
+    },
+    {
+      "name": "B",
+      "type": "add9",
+      "fret": 7,
+      "placement": ["x", "x", 3, 2, 1, 3],
+      "fingering": ["x", "x", 3, 2, 1, 4]
+    },
+    {
+      "name": "C",
+      "type": "add9",
+      "fret": 0,
+      "placement": ["x", 3, 2, 0, 3, 0],
+      "fingering": ["x", 2, 1, 0, 3, 0]
+    },
+    {
+      "name": "C",
+      "type": "#add9",
+      "fret": 9,
+      "placement": ["x", "x", 3, 2, 1, 3],
+      "fingering": ["x", "x", 3, 2, 1, 4]
+    },
+    {
+      "name": "D",
+      "type": "add9",
+      "fret": 10,
+      "placement": ["x", "x", 3, 2, 1, 3],
+      "fingering": ["x", "x", 3, 2, 1, 4]
+    },
+    {
+      "name": "D",
+      "type": "#add9",
+      "fret": 11,
+      "placement": ["x", "x", 3, 2, 1, 3],
+      "fingering": ["x", "x", 3, 2, 1, 4]
+    },
+    {
+      "name": "E",
+      "type": "add9",
+      "fret": 0,
+      "placement": ["x", "x", 2, 1, 0, 2],
+      "fingering": ["x", "x", 2, 1, 0, 3]
+    },
+    {
+      "name": "F",
+      "type": "add9",
+      "fret": 0,
+      "placement": ["x", "x", 3, 2, 1, 3],
+      "fingering": ["x", "x", 3, 2, 1, 4]
+    },
+    {
+      "name": "F",
+      "type": "#add9",
+      "fret": 2,
+      "placement": ["x", "x", 3, 2, 1, 3],
+      "fingering": ["x", "x", 3, 2, 1, 4]
+    },
+    {
+      "name": "G",
+      "type": "add9",
+      "fret": 3,
+      "placement": ["x", "x", 3, 2, 1, 3],
+      "fingering": ["x", "x", 3, 2, 1, 4]
+    },
+    {
+      "name": "G",
+      "type": "#add9",
+      "fret": 4,
+      "placement": ["x", "x", 3, 2, 1, 3],
+      "fingering": ["x", "x", 3, 2, 1, 4]
+    },
   ]
 }
