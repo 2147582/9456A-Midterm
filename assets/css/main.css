@@ -96,6 +96,17 @@ header {
   text-align: center;
 }
 
+.col-md-9 {
+  font-size: 20px;
+}
+
+.col-md-6 > p {
+  font-size: 19px;
+}
+
+.col-md-12 > p {
+  font-size: 19px;
+}
 
   img {
     background-position: -10px
