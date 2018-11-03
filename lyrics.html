@@ -98,6 +98,7 @@
   <div id="song1" class="modal">
     <div class="content">
       <pre>
+        <span class="close">&times;</span>
         <strong>All Of me</strong> by: John legend
 
 
@@ -250,6 +251,7 @@
   <div id="song2" class="modal">
     <div class="content">
       <pre>
+        <span class="close">&times;</span>
         <strong>Torete</strong> by: Moonstar88
 
         [Intro]
@@ -334,6 +336,7 @@
   <div id="song3" class="modal">
     <div class="content">
       <pre>
+        <span class="close">&times;</span>
         <strong>Bulong</strong> by: December Avenue
 
         [Intro]
@@ -400,6 +403,7 @@
   <div id="song4" class="modal">
     <div class="content">
       <pre>
+        <span class="close">&times;</span>
           <strong>Buwan</strong> by: Juan Karlos Labajo
 
           [Intro]
@@ -497,43 +501,51 @@
       btn.onclick = function() {
         modal.style.display = "block";
       }
-      window.onclick = function(event) {
-        if(event.target == modal) {
-          modal.style.display = "none";
-        }
-      }
+      // window.onclick = function(event) {
+      //   if(event.target == modal) {
+      //     modal.style.display = "none";
+      //   }
+      // }
 
       var modal1 = document.getElementById('song2');
       var btn1 = document.getElementById('torete');
       btn1.onclick = function() {
         modal1.style.display = "block";
       }
-      window.onclick = function(event) {
-        if(event.target == modal1) {
-          modal1.style.display = "none";
-        }
-      }
+
+      // window.onclick = function(event) {
+      //   if(event.target == modal1) {
+      //     modal1.style.display = "none";
+      //   }
+      // }
 
       var modal2 = document.getElementById('song3');
       var btn2 = document.getElementById('bulong');
       btn2.onclick = function() {
         modal2.style.display = "block";
       }
-      window.onclick = function(event) {
-        if(event.target == modal2) {
-          modal2.style.display = "none";
-        }
-      }
+      // window.onclick = function(event) {
+      //   if(event.target == modal2) {
+      //     modal2.style.display = "none";
+      //   }
+      // }
 
       var modal3 = document.getElementById('song4');
       var btn3 = document.getElementById('buwan');
       btn3.onclick = function() {
         modal3.style.display = "block";
       }
-      window.onclick = function(event) {
-        if(event.target == modal3) {
-          modal3.style.display = "none";
-        }
+      // window.onclick = function(event) {
+      //   if(event.target == modal3) {
+      //     modal3.style.display = "none";
+      //   }
+      // }
+      var span = document.getElementsByClassName("close")[0];
+      span.onclick = function() {
+        modal.style.display = "none";
+        modal1.style.display = "none";
+        modal2.style.display = "none";
+        modal3.style.display = "none";
       }
     </script>
 </body>
