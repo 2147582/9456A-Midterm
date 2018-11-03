@@ -6,6 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Online Guitar Tutorial</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
   <link rel="stylesheet" type="text/css" media="screen" href="assets/css/main.css" />
 
   <script src="assets/js/jquery-3.3.1.min.js"></script>
@@ -64,10 +67,10 @@
     var chords;
 
     //get json from root directory/js/chords.json
-    $.getJSON("assets/js/chords.json", function(data) {
+    $.getJSON("assets/js/chords.json", function (data) {
       chords = data;
-    }).then(function() {
-      $('.chord').each(function() {
+    }).then(function () {
+      $('.chord').each(function () {
         var chord = $(this).attr('chord');
         drawChord(chord, this, chords);
       })

@@ -1,10 +1,10 @@
 //variables
 var quiz = [];
 
-quiz[0] = new Question('<audio></audio>', "Em", "D", "G", "C");
-quiz[1] = new Question('<canvas class="chord" chord="D" width="180" height="200"></canvas>', "D", "Em", "G", "C");
-quiz[2] = new Question('<canvas class="chord" chord="G" width="180" height="200"></canvas>', "G", "D", "Em", "C");
-quiz[3] = new Question('<canvas class="chord" chord="C" width="180" height="200"></canvas>', "C", "D", "Em", "G");
+quiz[0] = new Question('<div class="chord-audio" chord="Em"></div>', "Em", "D", "G", "C");
+quiz[1] = new Question('<div class="chord-audio" chord="D"></div>', "D", "Em", "G", "C");
+quiz[2] = new Question('<div class="chord-audio" chord="G"></div>', "G", "D", "Em", "C");
+quiz[3] = new Question('<div class="chord-audio" chord="C"></div>', "C", "D", "Em", "G");
 
 var randomQuestion;
 var answers = [];
@@ -17,6 +17,7 @@ var total = 0;
 var timer = 30;
 
 function startTimer() {
+    btnProvideQuestion();
     var interval = setInterval(function () {
         document.getElementById('count').innerHTML = timer;
 
@@ -32,9 +33,9 @@ function startTimer() {
     }, 1000);
 }
 
-document.addEventListener("DOMContentLoaded", function (event) {
-    btnProvideQuestion();
-});
+// document.addEventListener("DOMContentLoaded", function (event) {
+//     btnProvideQuestion();
+// });
 
 function Question(question, rightAnswer, wrongAnswer1, wrongAnswer2, wrongAnswer3) {
     this.question = question;
@@ -66,18 +67,7 @@ function btnProvideQuestion() {
     document.getElementById("answerD").value = answers[3];
     document.getElementById("answerD").innerHTML = answers[3];
 
-    var chords;
-
-    //get json from root directory/js/chords.json
-    $.getJSON("assets/js/chords.json", function (data) {
-        chords = data;
-    }).then(function () {
-        $('.chord').each(function () {
-            var chord = $(this).attr('chord');
-            drawBlankChord(chord, this, chords);
-        })
-
-    });
+    chordAudioQuiz();
 }
 
 function answerA_clicked() {

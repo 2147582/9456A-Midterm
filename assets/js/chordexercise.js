@@ -17,6 +17,7 @@ var total = 0;
 var timer = 30;
 
 function startTimer() {
+    btnProvideQuestion();
     var interval = setInterval(function () {
         document.getElementById('count').innerHTML = timer;
 
@@ -32,9 +33,9 @@ function startTimer() {
     }, 1000);
 }
 
-document.addEventListener("DOMContentLoaded", function (event) {
-    btnProvideQuestion();
-});
+// document.addEventListener("DOMContentLoaded", function (event) {
+    
+// });
 
 function Question(question, rightAnswer, wrongAnswer1, wrongAnswer2, wrongAnswer3) {
     this.question = question;
