@@ -10,23 +10,26 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
 	<title>Web Systems and Technologies: Guitar Tutorial</title>
+	<style>
+		.exercise-container{min-height: 500px;}
+		.exercise-start{width: 100%; }
+		.exercise{width: 100%; display: none;}
+	</style>
 </head>
 
 <body>
-
-	<div class="container">
+<header>
+	<div class="container" id="top">
 		<div class="row justify-content-center">
-			<div class="col-md-6">
-				<img src="assets/img/cover.jpg" style="height: 500px; width: 600px">
-				<h1 style="text-align: center"> Guitar Tutorial</h1>
+			<div class="col-md-6" id="top-content"> 
+				<h1> Guitar Tutorial</h1>
 			</div>
-
 		</div>
-		<!-- <img src="assets/img/cover.jpg" style="height: 300px; width: 600px;"> -->
 	</div>
+	</header>
 
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-		<a class="navbar-brand" href="#">Guitar Tutorial</a>
+		<a class="navbar-brand" href="index.html">Guitar Tutorial</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
 		 aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
@@ -60,27 +63,74 @@
 
 
 	<div class="container">
-		<h3 style="text-align: center"> Introduction </h3>
+		<h2 style="text-align: center;padding: 5%"> Chord Exercise </h2>
 		<div class="row justify-content-center">
+			<div class="col-lg-12" style="padding: 5%;">
+				<div class="card" style="width: 60%; margin: auto;">
+					<h3 class="card-header">Identify the chord</h3>
+					<div class="card-body exercise-container">
 
+						<div class="exercise-start">
+							<img class="card-img-top" src="assets/img/chord-exercise.jpeg" alt="Chord Exercise">
+							<p>Memorize chords with this exercise by identifying the chords that is shown.</p>
+							<a id="next" class="btn btn-primary float-right">Next</a>
+						</div>
+						<div class="exercise">
+							<div id="notifier">
 
-			<div class="col-md-6">
-				<p>
-					Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-					standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
-					type specimen
-					book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining
-					essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
-					passages, and more
-					recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-				</p>
+							</div>
+							<div class="mx-auto">
+								<div id="exercise-container">
+									<div class="row" style="font-size: 1.5em;">
+										<div class="col-sm-6">Score</div>
+										<div class="col-sm-6">Time</div>
+									</div>
+									<div class="row" style="font-size: 1.1em">
+										<div id="score" class="col-sm-6">0</div>
+										<div id="count" class="col-sm-6">30</div>
+									</div>
+									<div class="row" style="padding-top: 20px;">
+										<div class="col-sm-12">
+											<div id="question" class="text-center" style="padding-left: 40px;"></div>
+										</div>
+									</div>
+
+									<div class="row">
+
+										<div class="col-sm-6" style="margin: 5px 0;">
+											<button id="answerA" class="btn btn-primary" onclick="answerA_clicked()" style="width: 100%"></button>
+										</div>
+										<div class="col-sm-6" style="margin: 5px 0;">
+											<button id="answerB" class="btn btn-primary" onclick="answerB_clicked()" style="width: 100%"></button>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-6" style="margin: 5px 0;">
+											<button id="answerC" class="btn btn-primary" onclick="answerC_clicked()" style="width: 100%"></button>
+										</div>
+										<div class="col-sm-6" style="margin: 5px 0;">
+											<button id="answerD" class="btn btn-primary" onclick="answerD_clicked()" style="width: 100%"></button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
-
-
 		</div>
 		<!-- <img src="assets/img/cover.jpg" style="height: 300px; width: 600px;"> -->
 	</div>
+	<script>
+		$('#next').click(function (e) {
+			e.preventDefault();
 
+			$(".exercise-start").delay(1000).fadeOut();
+			$(".exercise").delay(1500).fadeIn();
+			$("#startExercise").modal('toggle');
+		});
+	</script>
+	<script src="assets/js/audioexercise.js"></script>
 </body>
 
 </html>
