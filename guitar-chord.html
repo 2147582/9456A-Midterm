@@ -9,24 +9,23 @@
 	<script src="assets/js/popper.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
+	<script src="assets/js/jquery-3.3.1.min.js"></script>
 	<title>Web Systems and Technologies: Guitar Tutorial</title>
 </head>
 
 <body>
 
 	<header>
-	<div class="container" id="top">
-		<div class="row justify-content-center">
-			<div class="col-md-6" id="top-content"> 
-				<h1> Guitar Tutorial</h1>
+		<div class="container" id="top">
+			<div class="row justify-content-center">
+				<div class="col-md-6">
+					<h1 style="text-align: center"> Guitar Tutorial</h1>
+				</div> <!-- <img src="assets/img/cover.jpg" style="height: 300px; width: 600px;"> -->
 			</div>
-		</div> <!-- <img src="assets/img/cover.jpg" style="height: 300px; width: 600px;"> -->
-	</div>
 	</header>
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 		<a class="navbar-brand" href="index.html">Guitar Tutorial</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
-		 aria-expanded="false" aria-label="Toggle navigation">
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
 		<div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -38,8 +37,7 @@
 					<a class="nav-link" href="introduction.html">Introduction</a>
 				</li>
 				<li class="nav-item dropdown active">
-					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
-					 aria-expanded="false">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						Chords
 					</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -57,25 +55,73 @@
 	</nav>
 
 	<div class="container">
-		<h3 style="text-align: center"> Introduction </h3>
-		<div class="row justify-content-center">
+		<div class="jumbotron" id="diagram">
 
+			<h1 class="display-6">Chord Diagram</h1>
+			<br>
 
-			<div class="col-md-6">
-				<p>
-					Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-					standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
-					type specimen
-					book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining
-					essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
-					passages, and more
-					recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-				</p>
+			<div class="diagram">
+				<input type="radio" name="ch" value="A" id="A" checked><label for="A">A</label>
+				<input type="radio" name="ch" value="A#" id="A#"><label for="A#">A#</label>
+				<input type="radio" name="ch" value="B" id="B"><label for="B">B</label>
+				<input type="radio" name="ch" value="C" id="C"><label for="C">C</label>
+				<input type="radio" name="ch" value="C#" id="C#"><label for="C#">F</label>
+				<input type="radio" name="ch" value="D" id="D"><label for="D">D</label>
+				<input type="radio" name="ch" value="D#" id="D#"><label for="D#">D#</label>
+				<input type="radio" name="ch" value="E" id="E"><label for="E">E</label>
+				<input type="radio" name="ch" value="F" id="F"><label for="F">F</label>
+				<input type="radio" name="ch" value="F#" id="F#"><label for="F#">F#</label>
+				<input type="radio" name="ch" value="G" id="G"><label for="G">G</label>
+				<input type="radio" name="ch" value="G#" id="G#"><label for="G#">G#</label>
 			</div>
 
+			<hr class="my-2">
+
+			<div class="var">
+
+				<input type="radio" name="variety" value="" id="major"><label for="major">major</label>
+				<input type="radio" name="variety" value="m" id="minor"><label for="minor">minor</label>
+				<input type="radio" name="variety" value="m7" id="m7"><label for="m7">m7</label>
+				<input type="radio" name="variety" value="7" id="7"><label for="7">7</label>
+				<input type="radio" name="variety" value="add9" id="add9"><label for="add9">add9</label>
+
+			</div>
+
+			<hr class="my-2">
+
+			<div class="content">
+				<canvas class="chord" chord="A" width="180" height="200"></canvas>
+			</div>
 
 		</div>
-		<!-- <img src="assets/img/cover.jpg" style="height: 300px; width: 600px;"> -->
+		<script src="assets/js/popper.min.js"></script>
+		<script src="assets/js/bootstrap.min.js"></script>
+		<script src="assets/js/drawchord.js"></script>
+		<script>
+			var chords;
+			//get json from root directory/js/chords.json
+			$.getJSON("assets/js/chords.json", function(data) {
+				chords = data;
+			}).then(function() {
+				$('.chord').each(function() {
+					var chord = $(this).attr('chord');
+					drawChord(chord, this, chords);
+				})
+			});
+
+			function loadD() {
+				var xmlhttp = new XMLHttpRequest();
+				xmlhttp.onreadystatechange = function() {
+					if (this.readyState == 4 && this.status == 200) {
+						document.getElementsByClassName('.content').innerHTML = this.responseText;
+					}
+				};
+				xmlhttp.open("GET", "assets/js/chords.json", true);
+				xmlhttp.send();
+			}
+		</script>
+	</div>
+	<!-- <img src="assets/img/cover.jpg" style="height: 300px; width: 600px;"> -->
 	</div>
 
 </body>
