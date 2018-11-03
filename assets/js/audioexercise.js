@@ -1,11 +1,10 @@
 //variables
-var quiz = [];
-
-quiz[0] = new Question('<div class="chord-audio" chord="Em"></div>', "Em", "D", "G", "C");
-quiz[1] = new Question('<div class="chord-audio" chord="D"></div>', "D", "Em", "G", "C");
-quiz[2] = new Question('<div class="chord-audio" chord="G"></div>', "G", "D", "Em", "C");
-quiz[3] = new Question('<div class="chord-audio" chord="C"></div>', "C", "D", "Em", "G");
-
+var quiz;
+window.setTimeout(function () {
+    $.getJSON("assets/js/exercises/audio1.json", function (data) {
+        quiz = data;
+    });
+}, 0);
 var randomQuestion;
 var answers = [];
 var currentScore = 0;
@@ -32,18 +31,6 @@ function startTimer() {
         timer--;
     }, 1000);
 }
-
-// document.addEventListener("DOMContentLoaded", function (event) {
-//     btnProvideQuestion();
-// });
-
-function Question(question, rightAnswer, wrongAnswer1, wrongAnswer2, wrongAnswer3) {
-    this.question = question;
-    this.rightAnswer = rightAnswer;
-    this.wrongAnswer1 = wrongAnswer1;
-    this.wrongAnswer2 = wrongAnswer2;
-    this.wrongAnswer3 = wrongAnswer3;
-};
 
 function shuffle(o) {
     for (var j, x, i = o.length; i; j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);

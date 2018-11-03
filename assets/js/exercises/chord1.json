@@ -1,0 +1,29 @@
+[{
+        "question": "<canvas class='chord' chord='Em' width='180' height='200'></canvas>",
+        "rightAnswer": "Em",
+        "wrongAnswer1": "D",
+        "wrongAnswer2": "G",
+        "wrongAnswer3": "C"
+    },
+    {
+        "question": "<canvas class='chord' chord='D' width='180' height='200'></canvas>",
+        "rightAnswer": "D",
+        "wrongAnswer1": "Em",
+        "wrongAnswer2": "G",
+        "wrongAnswer3": "C"
+    },
+    {
+        "question": "<canvas class='chord' chord='G' width='180' height='200'></canvas>",
+        "rightAnswer": "G",
+        "wrongAnswer1": "D",
+        "wrongAnswer2": "Em",
+        "wrongAnswer3": "C"
+    },
+    {
+        "question": "<canvas class='chord' chord='C' width='180' height='200'></canvas>",
+        "rightAnswer": "C",
+        "wrongAnswer1": "D",
+        "wrongAnswer2": "G",
+        "wrongAnswer3": "Em"
+    }
+]

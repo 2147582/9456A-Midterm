@@ -1,0 +1,29 @@
+[{
+        "question": "<div class='chord-audio' chord='Em'></div>",
+        "rightAnswer": "Em",
+        "wrongAnswer1": "D",
+        "wrongAnswer2": "G",
+        "wrongAnswer3": "C"
+    },
+    {
+        "question": "<div class='chord-audio' chord='D'></div>",
+        "rightAnswer": "D",
+        "wrongAnswer1": "Em",
+        "wrongAnswer2": "G",
+        "wrongAnswer3": "C"
+    },
+    {
+        "question": "<div class='chord-audio' chord='G'></div>",
+        "rightAnswer": "G",
+        "wrongAnswer1": "D",
+        "wrongAnswer2": "Em",
+        "wrongAnswer3": "C"
+    },
+    {
+        "question": "<div class='chord-audio' chord='C'></div>",
+        "rightAnswer": "C",
+        "wrongAnswer1": "D",
+        "wrongAnswer2": "G",
+        "wrongAnswer3": "Em"
+    }
+]

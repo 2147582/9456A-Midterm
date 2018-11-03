@@ -1,10 +1,10 @@
 //variables
-var quiz = [];
-
-quiz[0] = new Question('<canvas class="chord" chord="Em" width="180" height="200"></canvas>', "Em", "D", "G", "C");
-quiz[1] = new Question('<canvas class="chord" chord="D" width="180" height="200"></canvas>', "D", "Em", "G", "C");
-quiz[2] = new Question('<canvas class="chord" chord="G" width="180" height="200"></canvas>', "G", "D", "Em", "C");
-quiz[3] = new Question('<canvas class="chord" chord="C" width="180" height="200"></canvas>', "C", "D", "Em", "G");
+var quiz;
+window.setTimeout(function () {
+    $.getJSON("assets/js/exercises/chord1.json", function (data) {
+        quiz = data;
+    });
+}, 0);
 
 var randomQuestion;
 var answers = [];
@@ -13,7 +13,6 @@ var streak = 0;
 
 var incorrect = 0;
 var total = 0;
-
 var timer = 30;
 
 function startTimer() {
@@ -32,18 +31,6 @@ function startTimer() {
         timer--;
     }, 1000);
 }
-
-// document.addEventListener("DOMContentLoaded", function (event) {
-    
-// });
-
-function Question(question, rightAnswer, wrongAnswer1, wrongAnswer2, wrongAnswer3) {
-    this.question = question;
-    this.rightAnswer = rightAnswer;
-    this.wrongAnswer1 = wrongAnswer1;
-    this.wrongAnswer2 = wrongAnswer2;
-    this.wrongAnswer3 = wrongAnswer3;
-};
 
 function shuffle(o) {
     for (var j, x, i = o.length; i; j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
