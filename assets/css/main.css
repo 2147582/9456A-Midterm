@@ -154,6 +154,18 @@
     text-align: center;
     padding: 20px;
   }
+  tr:nth-child(even){
+    background-color: #dddddd;
+  }
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  table {
+    width: 80%;
+    border: 1px solid;
+  }
   .modal {
     display: none;
     position: fixed;
