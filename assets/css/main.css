@@ -2,6 +2,33 @@
     height: 100%;
   }
 
+  .diagram, .display-6, .var, .content {
+    text-align: center;
+    margin: 3% 0;
+  }
+  .chord {
+    line-height: 50px;
+  }
+
+  #diagram {
+    height: 100%;
+    margin-top: 5%;
+  }
+
+  input {
+    visibility: hidden;
+  }
+
+  label {
+    cursor: pointer;
+    font-size: 2em;
+    margin-right: 1%;
+    margin-left: 2%;
+  }
+
+  input:checked + label {
+    background-color: rgb(83,236,227);
+  }
 
   pre {
     background-color: hsl(64,52%,58%);
