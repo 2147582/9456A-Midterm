@@ -48,25 +48,18 @@
 
   #first {
     background-image: url(../img/guitarist.jpeg);
-    height: 1000px;
+    height: 700px;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    text-align: center;
+    position: relative;
   }
-
-/*
-  #first > h3 {
-    width: 100%;
-    height: 100%;
-    top: 0;
-    position: fixed;
-  }
-*/
 
   #second {
     background-image: url(../img/wallpaper.jpg);
-    height: 1000px;
+    height: 700px;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -75,17 +68,22 @@
 
   #third {
     background-image: url(../img/guitarist2.jpeg);
-    height: 1000px;
+    height: 700px;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
   }
 
-  /*#headstock {
-  height: 100px;
-  width: 100px;
-}*/
+  .mid-text { 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 39px;
+  }
+
 
 header {
   background-image: linear-gradient(grey, white);
