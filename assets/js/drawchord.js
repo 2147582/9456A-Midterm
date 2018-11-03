@@ -14,6 +14,19 @@ function removeX(array) {
     return cleanArray;
 }
 
+function initChords() {
+    var chords;
+    //get json from root directory/js/chords.json
+    $.getJSON("assets/js/chords.json", function (data) {
+        chords = data;
+    }).then(function () {
+        $('.chord').each(function () {
+            var chord = $(this).attr('chord');
+            drawChord(chord, this, chords);
+        })
+    });
+}
+
 function drawChord(chordName, canvas, arr = chords) {
     var c = canvas;
     var ctx = c.getContext('2d');

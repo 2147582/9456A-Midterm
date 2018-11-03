@@ -4,12 +4,17 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Web Systems and Technologies: Guitar Tutorial</title>
+
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
+
 	<script src="./assets/js/jquery-3.3.1.min.js"></script>
 	<script src="assets/js/bootstrap.min.js"></script>
 	<script src="assets/js/popper.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
-	<title>Web Systems and Technologies: Guitar Tutorial</title>
+
 	<style>
 		.exercise-container{min-height: 500px;}
 		.exercise-start{width: 100%; }
@@ -18,14 +23,14 @@
 </head>
 
 <body>
-<header>
-	<div class="container" id="top">
-		<div class="row justify-content-center">
-			<div class="col-md-6" id="top-content"> 
-				<h1> Guitar Tutorial</h1>
+	<header>
+		<div class="container" id="top">
+			<div class="row justify-content-center">
+				<div class="col-md-6" id="top-content">
+					<h1> Guitar Tutorial</h1>
+				</div>
 			</div>
-		</div>		
-	</div>
+		</div>
 	</header>
 
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -71,7 +76,7 @@
 					<div class="card-body exercise-container">
 
 						<div class="exercise-start">
-							<img class="card-img-top" src="assets/img/chord-exercise.jpeg" alt="Chord Exercise">
+							<img class="card-img-top" src="assets/img/audio-exercise.jpeg" alt="Chord Exercise">
 							<p>Memorize chords with this exercise by identifying the chords that is shown.</p>
 							<a id="next" class="btn btn-primary float-right">Next</a>
 						</div>
@@ -121,6 +126,49 @@
 		</div>
 		<!-- <img src="assets/img/cover.jpg" style="height: 300px; width: 600px;"> -->
 	</div>
+
+	<!-- modal start exercise -->
+	<div id="startExercise" class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="startExercise"
+	 aria-hidden="true">
+		<div class="modal-dialog modal-sm">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Prompt</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<p>You're exercise is about to start. Just click on start when you are ready.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" onclick="startTimer();" data-dismiss="modal">Start</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- modal score -->
+	<div id="scoreModal" class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="scoreModal"
+	 aria-hidden="true">
+		<div class="modal-dialog modal-sm">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Results</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div id="scoreResult"></div>
+					<div id="accuracy"></div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" onclick="window.location = '/guitar-exercises.html';" data-dismiss="modal">Ok</button>
+				</div>
+			</div>
+		</div>
+	</div>
 	<script>
 		$('#next').click(function (e) {
 			e.preventDefault();
@@ -130,7 +178,9 @@
 			$("#startExercise").modal('toggle');
 		});
 	</script>
+	<script src="assets/js/chordaudio.js"></script>
 	<script src="assets/js/audioexercise.js"></script>
+
 </body>
 
 </html>
