@@ -7,7 +7,10 @@
   .var,
   .content {
     text-align: center;
-    margin: 3% 0;
+  }
+
+  .content {
+    padding-top: 10px;
   }
 
   .chord {
@@ -34,12 +37,6 @@
     background-color: rgb(83, 236, 227);
   }
 
-  pre {
-    background-color: hsl(64, 52%, 58%);
-    border-radius: 10px;
-    margin: 3% 2%;
-    padding: 3% 0;
-  }
 
   .chords {
     display: inline-block;
@@ -67,7 +64,6 @@
     position: fixed;
   }
 */
-
   #second {
     background-image: url(../img/wallpaper.jpg);
     height: 1000px;
@@ -90,7 +86,6 @@
   height: 100px;
   width: 100px;
 }*/
-
   header {
     background-image: linear-gradient(grey, white);
   }
@@ -100,17 +95,17 @@
     text-align: center;
   }
 
-.col-md-9 {
-  font-size: 20px;
-}
+  .col-md-9 {
+    font-size: 20px;
+  }
 
-.col-md-6 > p {
-  font-size: 19px;
-}
+  .col-md-6>p {
+    font-size: 19px;
+  }
 
-.col-md-12 > p {
-  font-size: 19px;
-}
+  .col-md-12>p {
+    font-size: 19px;
+  }
 
   img {
     background-position: -10px
@@ -119,9 +114,10 @@
   p {
     text-align: justify;
   }
-#accordion {
-  margin: 2%;
-}
+
+  #accordion {
+    margin: 2%;
+  }
 
   .container>p {
     text-align: center;
@@ -133,7 +129,6 @@
   }
 
   #top-content {
-    background-image: url(assets/img/cover.jpg);
     background-size: cover;
     height: 100px;
     background-position: top;
@@ -156,4 +151,4 @@
     color: white;
     text-align: center;
     padding: 20px;
-}
+  }

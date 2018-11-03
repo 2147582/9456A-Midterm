@@ -5,11 +5,8 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<script src="./assets/js/jquery-3.3.1.min.js"></script>
-	<script src="assets/js/bootstrap.min.js"></script>
-	<script src="assets/js/popper.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
-	<script src="assets/js/jquery-3.3.1.min.js"></script>
 	<title>Web Systems and Technologies: Guitar Tutorial</title>
 </head>
 
@@ -26,8 +23,7 @@
 
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 		<a class="navbar-brand" href="index.html">Guitar Tutorial</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
-		 aria-expanded="false" aria-label="Toggle navigation">
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
 		<div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -39,8 +35,7 @@
 					<a class="nav-link" href="introduction.html">Introduction</a>
 				</li>
 				<li class="nav-item dropdown active">
-					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
-					 aria-expanded="false">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						Chords
 					</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -93,7 +88,7 @@
 			<hr class="my-2">
 
 			<div class="chord-container content">
-				<canvas id="chord-content" class="chord" chord="A" width="180" height="200"></canvas>
+				<canvas id="chord-content" class="chord" chord="A" width="200" height="200"></canvas>
 			</div>
 
 		</div>
@@ -104,10 +99,10 @@
 			function initChords() {
 				var chords;
 				//get json from root directory/js/chords.json
-				$.getJSON("assets/js/chords.json", function (data) {
+				$.getJSON("assets/js/chords.json", function(data) {
 					chords = data;
-				}).then(function () {
-					$('.chord').each(function () {
+				}).then(function() {
+					$('.chord').each(function() {
 						var chord = $(this).attr('chord');
 						drawChord(chord, this, chords);
 					})
@@ -116,14 +111,13 @@
 
 			initChords();
 
-			$('#diagram label').each(function () {
-				$(this).click(function (e) {
-					window.setTimeout(function () {
+			$('#diagram label').each(function() {
+				$(this).click(function(e) {
+					window.setTimeout(function() {
 						var selectedChord = $('[name=ch]:checked').val() + $('[name=variety]:checked').val();
-						console.log(selectedChord)
 						$('.chord-container').html(
 							'<canvas id="chord-content" class="chord" chord="' + selectedChord +
-							'" width="180" height="200"></canvas>'
+							'" width="200" height="200"></canvas>'
 						);
 						initChords();
 					}, 0);
