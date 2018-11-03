@@ -154,19 +154,26 @@
     text-align: center;
     padding: 20px;
   }
-  tr:nth-child(even){
-    background-color: #dddddd;
-  }
+
   td, th {
     border: 1px solid #dddddd;
     text-align: left;
     padding: 8px;
   }
-  table {
+  .table {
     width: 80%;
-    border: 1px solid;
   }
-  .modal {
+  .view {
+    width: 50%;
+    display: block;
+    margin: auto;
+  }
+  .modal-content {
+    margin: auto;
+    padding: 20px;
+    width: 130%;
+  }
+  /*.modal-content {
     display: none;
     position: fixed;
     z-index: 1;
@@ -186,3 +193,4 @@
     border: 1px solid #888;
     width: 80%;
   }
+*/
