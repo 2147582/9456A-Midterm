@@ -52,7 +52,7 @@
 
   #first {
     background-image: url(../img/guitarist.jpeg);
-    height: 700px;
+    height: 500px;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -61,18 +61,7 @@
     position: relative;
   }
 
-<<<<<<< HEAD
-=======
   /*
-  #first > h3 {
-    width: 100%;
-    height: 100%;
-    top: 0;
-    position: fixed;
-  }
-*/
-
->>>>>>> 4ec4ff55154b366c05817c813a0778ee39bfcac6
   #second {
     background-image: url(../img/wallpaper.jpg);
     height: 700px;
@@ -90,6 +79,7 @@
     background-attachment: fixed;
     background-size: cover;
   }
+  */
 
   .mid-text { 
     position: absolute;
