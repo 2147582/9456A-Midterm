@@ -63,6 +63,7 @@
   </nav>
 
   <br>
+  <!-- Table for choosing song -->
   <table align="center" class="table table-striped table-borderless">
     <tr>
       <th>Song</th>
@@ -95,6 +96,7 @@
     </tr>
   </table>
 
+  <!--Start of song All of me -->
   <div class="modal" id="song1" tabindex="-1" role="dialog" aria-labelledby="allofme" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -103,7 +105,7 @@
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
-      </div>
+      </div><!--end of modal header -->
 
       <div class="modal-body">
         <pre>
@@ -251,14 +253,16 @@
 
           And you give me <span class="chords">Em</span>all, al<span class="chords">C</span>l of <span class="chords">G</span>you, o<span class="chords">D</span>h
         </pre>
-        </div>
+        </div><!--end of modal body -->
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
+        </div><!--end of modal footer -->
+      </div><!--end of modal content -->
+    </div> <!--end of modal dialog -->
+  </div>  <!--end of modal container -->
+  <!--end of song All of me -->
 
+  <!--start of song torete -->
   <div class="modal" id="song2" tabindex="-1" role="dialog" aria-labelledby="torete" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -267,7 +271,7 @@
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
-      </div>
+      </div><!--end of modal header -->
 
       <div class="modal-body">
       <pre>
@@ -349,14 +353,16 @@
 
         <span class="chords">D</span>Torete, <span class="chords">F#m</span>Torete, <span class="chords">Bm</span>Torete <span class="chords">G</span>sa'yo
       </pre>
-      </div>
+      </div><!--end of modal body -->
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
+        </div><!--end of modal footer -->
+      </div><!--end of modal content -->
+    </div><!--end of modal dialog -->
+  </div><!--end of modal container -->
+  <!--end of song torete -->
 
+  <!--start of song bulong -->
   <div class="modal" id="song3" tabindex="-1" role="dialog" aria-labelledby="bulong" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -365,7 +371,7 @@
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
-      </div>
+      </div><!--end of modal header -->
 
       <div class="modal-body">
       <pre>
@@ -428,14 +434,16 @@
         [Outro]
         <strong>F Am7 G</strong>
       </pre>
-        </div>
+        </div><!--end of modal body -->
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
+        </div><!--end of modal footer -->
+      </div><!--end of modal content -->
+    </div><!--end of modal dialog -->
+  </div><!--end of modal container -->
+  <!--end of song bulong -->
 
+  <!--start of song buwan -->
   <div class="modal" id="song4" tabindex="-1" role="dialog" aria-labelledby="buwan" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -444,7 +452,7 @@
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
-      </div>
+      </div><!--end of modal header -->
 
       <div class="modal-body">
       <pre>
@@ -535,67 +543,14 @@
 
           Pakinggan mo pakinggan pakinggan mo aking sinta
       </pre>
-      </div>
+      </div><!--end of modal body -->
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-    <!-- <script>
-      var modal = document.getElementById('song1');
-      var btn = document.getElementById('allofme');
-      btn.onclick = function() {
-        modal.style.display = "block";
-      }
-      // window.onclick = function(event) {
-      //   if(event.target == modal) {
-      //     modal.style.display = "none";
-      //   }
-      // }
-
-      var modal1 = document.getElementById('song2');
-      var btn1 = document.getElementById('torete');
-      btn1.onclick = function() {
-        modal1.style.display = "block";
-      }
-
-      // window.onclick = function(event) {
-      //   if(event.target == modal1) {
-      //     modal1.style.display = "none";
-      //   }
-      // }
-
-      var modal2 = document.getElementById('song3');
-      var btn2 = document.getElementById('bulong');
-      btn2.onclick = function() {
-        modal2.style.display = "block";
-      }
-      // window.onclick = function(event) {
-      //   if(event.target == modal2) {
-      //     modal2.style.display = "none";
-      //   }
-      // }
-
-      var modal3 = document.getElementById('song4');
-      var btn3 = document.getElementById('buwan');
-      btn3.onclick = function() {
-        modal3.style.display = "block";
-      }
-      // window.onclick = function(event) {
-      //   if(event.target == modal3) {
-      //     modal3.style.display = "none";
-      //   }
-      // }
-      var span = document.getElementsByClassName("close")[0];
-      span.onclick = function() {
-        modal.style.display = "none";
-        modal1.style.display = "none";
-        modal2.style.display = "none";
-        modal3.style.display = "none";
-      }
-    </script> -->
+        </div><!--end of modal footer -->
+      </div><!--end of modal content -->
+    </div><!--end of modal dialog -->
+  </div><!--end of modal container -->
+  <!--end of song buwan -->
 </body>
 
 </html>
