@@ -95,6 +95,9 @@ header {
   p {
     text-align: justify;
   }
+#accordion {
+  margin: 2%;
+}
 
 .container > p {
   text-align: center;
