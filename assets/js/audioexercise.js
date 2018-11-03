@@ -1,10 +1,5 @@
 //variables
 var quiz;
-window.setTimeout(function () {
-    $.getJSON("assets/js/exercises/audio1.json", function (data) {
-        quiz = data;
-    });
-}, 0);
 var randomQuestion;
 var answers = [];
 var currentScore = 0;
@@ -15,8 +10,12 @@ var total = 0;
 
 var timer = 30;
 
-function startTimer() {
-    btnProvideQuestion();
+function startTimer(exerciseNumber) {
+    $.getJSON("assets/js/exercises/audio" + exerciseNumber + ".json", function (data) {
+        quiz = data;
+    }).then(function () {
+        btnProvideQuestion();
+    });
     var interval = setInterval(function () {
         document.getElementById('count').innerHTML = timer;
 
