@@ -53,3 +53,44 @@
   img {
     background-position: -10px
   }
+
+  p {
+    text-align: justify;
+  }
+
+.container > p {
+  text-align: center;
+}
+
+.container > h3, #about {
+    text-align: center;
+}
+
+#top-content{
+  background-image: url(assets/img/cover.jpg);
+  background-size: cover;
+  height: 100px;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+#about-content {
+  padding: 10px;
+}
+
+#top-content > h1 {
+  text-align: center;
+}
+
+footer {
+    position: bottom fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: grey;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
