@@ -178,8 +178,8 @@
       "name": "G",
       "type": "",
       "fret": 0,
-      "placement": [3, 2, 0, 0, 3, 3],
-      "fingering": [2, 1, 0, 0, 3, 4]
+      "placement": [3, 2, 0, 0, 3, 0],
+      "fingering": [2, 1, 0, 0, 3, 0]
     },
     {
       "name": "G",

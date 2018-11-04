@@ -38,8 +38,7 @@
 		<a class="navbar-brand" href="index.html">
 			<img src="assets/img/GT.png" style="height: 50px; width: 50px;">
 		</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
-		 aria-expanded="false" aria-label="Toggle navigation">
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
 		<div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -51,8 +50,7 @@
 					<a class="nav-link" href="introduction.html">Introduction</a>
 				</li>
 				<li class="nav-item dropdown active">
-					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
-					 aria-expanded="false">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						Chords
 					</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -66,13 +64,22 @@
 			</ul>
 		</div>
 	</nav>
-	
+
 	<div class="container">
 		<h2 style="text-align: center;padding-top: 5%;"> Chord Exercise </h2>
 		<div class="row justify-content-center">
 
-			<div class="col-lg-12" style="padding: 5%;">
-				<div class="card" style="width: 60%; margin: auto;">
+			<div class="col-lg-3">
+				<div class="list-group" id="list-tab" role="tablist">
+					<a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Level 1</a>
+					<a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Level 2</a>
+					<a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Level 3</a>
+				</div>
+			</div>
+
+
+			<div class="col-lg-9">
+				<div class="card" style="width: 100%;">
 					<h3 class="card-header">Identify the chord</h3>
 					<div class="card-body exercise-container">
 
@@ -130,8 +137,7 @@
 	</div>
 
 	<!-- modal start exercise -->
-	<div id="startExercise" class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="startExercise"
-	 aria-hidden="true">
+	<div id="startExercise" class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="startExercise" aria-hidden="true">
 		<div class="modal-dialog modal-sm">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -148,8 +154,7 @@
 	</div>
 
 	<!-- modal score -->
-	<div id="scoreModal" class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="scoreModal"
-	 aria-hidden="true">
+	<div id="scoreModal" class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="scoreModal" aria-hidden="true">
 		<div class="modal-dialog modal-sm">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -167,10 +172,10 @@
 	</div>
 
 	<script>
-		$('#scoreModal').on('hidden.bs.modal', function (e) {
+		$('#scoreModal').on('hidden.bs.modal', function(e) {
 			window.location = '/guitar-exercises.html';
 		})
-		$('#next').click(function (e) {
+		$('#next').click(function(e) {
 			e.preventDefault();
 
 			$(".exercise-start").delay(1000).fadeOut();
