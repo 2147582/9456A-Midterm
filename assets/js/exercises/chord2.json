@@ -1,0 +1,71 @@
+[{
+        "question": "<canvas class='chord' chord='A' width='180' height='200'></canvas>",
+        "rightAnswer": "A",
+        "wrongAnswer1": "E",
+        "wrongAnswer2": "Am",
+        "wrongAnswer3": "F"
+    },
+    {
+        "question": "<canvas class='chord' chord='A' width='180' height='200'></canvas>",
+        "rightAnswer": "A",
+        "wrongAnswer1": "E",
+        "wrongAnswer2": "Am",
+        "wrongAnswer3": "Dm"
+    },
+    {
+        "question": "<canvas class='chord' chord='E' width='180' height='200'></canvas>",
+        "rightAnswer": "E",
+        "wrongAnswer1": "A",
+        "wrongAnswer2": "Am",
+        "wrongAnswer3": "Dm"
+    },
+    {
+        "question": "<canvas class='chord' chord='E' width='180' height='200'></canvas>",
+        "rightAnswer": "E",
+        "wrongAnswer1": "A",
+        "wrongAnswer2": "F",
+        "wrongAnswer3": "Dm"
+    },
+    {
+        "question": "<canvas class='chord' chord='Am' width='180' height='200'></canvas>",
+        "rightAnswer": "Am",
+        "wrongAnswer1": "A",
+        "wrongAnswer2": "E",
+        "wrongAnswer3": "Dm"
+    },
+    {
+        "question": "<canvas class='chord' chord='Am' width='180' height='200'></canvas>",
+        "rightAnswer": "Am",
+        "wrongAnswer1": "A",
+        "wrongAnswer2": "F",
+        "wrongAnswer3": "E"
+    },
+    {
+        "question": "<canvas class='chord' chord='F' width='180' height='200'></canvas>",
+        "rightAnswer": "F",
+        "wrongAnswer1": "A",
+        "wrongAnswer2": "Am",
+        "wrongAnswer3": "Dm"
+    },
+    {
+        "question": "<canvas class='chord' chord='F' width='180' height='200'></canvas>",
+        "rightAnswer": "F",
+        "wrongAnswer1": "E",
+        "wrongAnswer2": "Am",
+        "wrongAnswer3": "Dm"
+    },
+    {
+        "question": "<canvas class='chord' chord='Dm' width='180' height='200'></canvas>",
+        "rightAnswer": "Dm",
+        "wrongAnswer1": "A",
+        "wrongAnswer2": "Am",
+        "wrongAnswer3": "F"
+    },
+    {
+        "question": "<canvas class='chord' chord='Dm' width='180' height='200'></canvas>",
+        "rightAnswer": "Dm",
+        "wrongAnswer1": "E",
+        "wrongAnswer2": "Am",
+        "wrongAnswer3": "F"
+    }
+]

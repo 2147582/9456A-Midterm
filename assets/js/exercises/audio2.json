@@ -1,0 +1,71 @@
+[{
+        "question": "<div class='chord-audio' chord='A'></div>",
+        "rightAnswer": "A",
+        "wrongAnswer1": "E",
+        "wrongAnswer2": "Am",
+        "wrongAnswer3": "F"
+    },
+    {
+        "question": "<div class='chord-audio' chord='A'></div>",
+        "rightAnswer": "A",
+        "wrongAnswer1": "E",
+        "wrongAnswer2": "Am",
+        "wrongAnswer3": "Dm"
+    },
+    {
+        "question": "<div class='chord-audio' chord='E'></div>",
+        "rightAnswer": "E",
+        "wrongAnswer1": "A",
+        "wrongAnswer2": "Am",
+        "wrongAnswer3": "Dm"
+    },
+    {
+        "question": "<div class='chord-audio' chord='E'></div>",
+        "rightAnswer": "E",
+        "wrongAnswer1": "A",
+        "wrongAnswer2": "F",
+        "wrongAnswer3": "Dm"
+    },
+    {
+        "question": "<div class='chord-audio' chord='Am'></div>",
+        "rightAnswer": "Am",
+        "wrongAnswer1": "A",
+        "wrongAnswer2": "E",
+        "wrongAnswer3": "Dm"
+    },
+    {
+        "question": "<div class='chord-audio' chord='Am'></div>",
+        "rightAnswer": "Am",
+        "wrongAnswer1": "A",
+        "wrongAnswer2": "F",
+        "wrongAnswer3": "E"
+    },
+    {
+        "question": "<div class='chord-audio' chord='F'></div>",
+        "rightAnswer": "F",
+        "wrongAnswer1": "A",
+        "wrongAnswer2": "Am",
+        "wrongAnswer3": "Dm"
+    },
+    {
+        "question": "<div class='chord-audio' chord='F'></div>",
+        "rightAnswer": "F",
+        "wrongAnswer1": "E",
+        "wrongAnswer2": "Am",
+        "wrongAnswer3": "Dm"
+    },
+    {
+        "question": "<div class='chord-audio' chord='Dm'></div>",
+        "rightAnswer": "Dm",
+        "wrongAnswer1": "A",
+        "wrongAnswer2": "Am",
+        "wrongAnswer3": "F"
+    },
+    {
+        "question": "<div class='chord-audio' chord='Dm'></div>",
+        "rightAnswer": "Dm",
+        "wrongAnswer1": "E",
+        "wrongAnswer2": "Am",
+        "wrongAnswer3": "F"
+    }
+]
