@@ -19,7 +19,7 @@
 		.exercise-container{min-height: 500px;}
 		.exercise-start{width: 100%; }
 		.exercise{width: 100%; display: none;}
-		.modal-backdrop.fade{z-index: -99;}
+		.modal-backdrop.fade{z-index: -1;}
 	</style>
 </head>
 
@@ -58,8 +58,6 @@
 					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 						<a class="dropdown-item" href="guitar-chord.html">Diagram</a>
 						<a class="dropdown-item" href="guitar-exercises.html">Guitar Exercises</a>
-						<a class="dropdown-item" href="chord-exercise.html">Chord Exercises</a>
-						<a class="dropdown-item" href="audio-exercise.html">Audio Exercises</a>
 					</div>
 				</li>
 				<li class="nav-item">
@@ -70,11 +68,24 @@
 	</nav>
 
 	<div class="container">
-		<h2 style="text-align: center;padding: 5%"> Chord Exercise </h2>
+		<h2 style="text-align: center;padding-top: 5%;"> Chord Exercise </h2>
 		<div class="row justify-content-center">
 
-			<div class="col-lg-12" style="padding: 5%;">
-				<div class="card" style="width: 60%; margin: auto;">
+			<div class="col-lg-3">
+				<div class="list-group" id="list-tab" role="tablist">
+					<a class="level list-group-item list-group-item-action active" data-toggle="list" href="#list-home" role="tab"
+					 aria-controls="home" level="1">Level 1</a>
+					<a class="level list-group-item list-group-item-action" data-toggle="list" href="#list-profile" role="tab"
+					 aria-controls="profile" level="2">Level 2</a>
+					<a class="level list-group-item list-group-item-action" data-toggle="list" href="#list-messages" role="tab"
+					 aria-controls="messages" level="3">Level 3</a>
+
+				</div>
+			</div>
+
+
+			<div class="col-lg-9">
+				<div class="card" style="width: 100%;">
 					<h3 class="card-header">Identify the chord</h3>
 					<div class="card-body exercise-container">
 
@@ -143,7 +154,7 @@
 					<p>You're exercise is about to start. Just click on start when you are ready.</p>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-primary" onclick="startTimer('1');" data-dismiss="modal">Start</button>
+					<button type="button" class="btn btn-primary" onclick="startTimer(levelSelected);" data-dismiss="modal">Start</button>
 				</div>
 			</div>
 		</div>
@@ -169,6 +180,10 @@
 	</div>
 
 	<script>
+		var levelSelected
+		$('.level').click(function (e) {
+			levelSelected = $(this).attr('level');
+		});
 		$('#scoreModal').on('hidden.bs.modal', function (e) {
 			window.location = '/guitar-exercises.html';
 		})
@@ -183,6 +198,7 @@
 			});
 		});
 	</script>
+	<script src="assets/js/db.js"></script>
 	<script src="assets/js/chordexercise.js"></script>
 </body>
 

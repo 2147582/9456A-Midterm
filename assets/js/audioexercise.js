@@ -25,7 +25,7 @@ function startTimer(exerciseNumber) {
             $('#scoreResult').html('<b>Score</b>: ' + currentScore);
             $('#accuracy').html('<b>Accuracy</b>: ' + (((total - incorrect) / total) * 100).toFixed(2));
             $('#scoreModal').modal('toggle');
-
+            recordScore(currentScore, (((total - incorrect) / total) * 100).toFixed(2), exerciseNumber, 'audio');
         }
         timer--;
     }, 1000);
@@ -87,9 +87,9 @@ function adjustScore(isCorrect) {
     } else {
         incorrect++;
         streak = 0;
-        if (currentScore > 0) {
-            currentScore--;
-        }
+        // if (currentScore > 0) {
+        //     currentScore--;
+        // }
     }
     document.getElementById("score").innerHTML = currentScore;
 }
@@ -107,7 +107,7 @@ function checkAnswer(answer) {
             $('#notifier').html('<div class="alert alert-success" role="alert">Time Bonus <b>+3</b></div>');
         }
     } else {
-        $('#notifier').html('<div class="alert alert-danger" role="alert">Wrong <b>-1</b></div>');
+        $('#notifier').html('<div class="alert alert-danger" role="alert">Wrong</div>');
         adjustScore(false);
     }
 }
