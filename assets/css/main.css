@@ -173,3 +173,6 @@
     padding: 20px;
     width: 130%;
   }
+  .modal-header {
+    text-align: center;
+  }
