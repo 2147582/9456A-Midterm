@@ -39,7 +39,8 @@
   }
 
   /*
-  Button size in Chord Diagram
+  Style for the Button size in Chord Diagram
+  Added by: Baterina, Albert Lexter
   */
   .btn-secondary {
     padding: 1px 10px;
@@ -59,9 +60,14 @@
     font-weight: bold;
   }
 
+  /*
+  Style for the image in index.html
+  Added by: Gregorio, Marc Laurence
+  Modified by: Baterina, Albert Lexter
+  */
   #first {
     background-image: url(../img/guitarist.jpeg);
-    height: 500px;
+    height: 600px;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -70,26 +76,12 @@
     position: relative;
   }
 
+
   /*
-  #second {
-    background-image: url(../img/wallpaper.jpg);
-    height: 700px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-  }
-
-  #third {
-    background-image: url(../img/guitarist2.jpeg);
-    height: 700px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-  }
+  Style for the text in index.html
+  Added by: Gregorio, Marc Laurence
+  Modified by: Baterina, Albert Lexter
   */
-
   .mid-text {
     position: absolute;
     top: 50%;
@@ -97,11 +89,6 @@
     transform: translate(-50%, -50%);
     color: white;
     font-size: 39px;
-  }
-
-
-  header {
-    background-image: linear-gradient(grey, white);
   }
 
   #top-content>h1 {
@@ -137,8 +124,7 @@
     text-align: center;
   }
 
-  .container>h3,
-  #about {
+  .container> h3, #about {
     text-align: center;
   }
 
@@ -151,10 +137,18 @@
     background-size: cover;
   }
 
+  /*
+  Style for the padding area on About.html
+  Added by: Baterina, Albert Lexter
+  */
   #about-content {
     padding: 10px;
   }
 
+  /*
+  Style for the footer in About.html
+  Added by: Baterina, Albert Lexter
+  */
   footer {
     position: absolute;
     position: bottom;
