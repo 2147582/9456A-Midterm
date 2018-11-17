@@ -22,6 +22,7 @@
     margin-top: 5%;
   }
 
+
   input[type=radio] {
     visibility: hidden;
   }
@@ -30,11 +31,22 @@
     cursor: pointer;
     font-size: 2em;
     margin-right: 1%;
-    margin-left: 2%;
+    margin-left: 1%;
   }
 
-  input:checked+label {
-    background-color: rgb(83, 236, 227);
+  input:checked+label{
+    background-color: #adafb2;
+  }
+
+  /*
+  Button size in Chord Diagram
+  */
+  .btn-secondary {
+    padding: 1px 10px;
+    font-size: 15px;
+    border-radius: 10px;
+    padding-left: 10px;
+
   }
 
 
@@ -172,4 +184,7 @@
     margin: auto;
     padding: 20px;
     width: 130%;
+  }
+  .modal-header {
+    text-align: center;
   }
