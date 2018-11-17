@@ -1,0 +1,12 @@
+.chordline span strong span {
+    display: none;
+}
+
+.chordline span strong {
+    position: relative;
+    top: -1.3em;
+    left: 0;
+    line-height: 2.5em;
+    width: 0;
+    display: inline-block;
+}

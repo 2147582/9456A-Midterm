@@ -5,6 +5,22 @@ $.ajaxSetup({
     }
 });
 
+$(document).ready(function () {
+    $('#song-search').submit(function (e) {
+        e.preventDefault();
+        searchSongs();
+
+    });
+
+    $("body").on('DOMSubtreeModified', "#song-table-body", function () {
+        $('.view-song').click(function (e) {
+            e.preventDefault();
+            var songURL = $(this).attr('href');
+            viewSong(songURL);
+        });
+    });
+});
+
 function searchSongs() {
     var searchString = $('#search-text').val();
     $.ajax({
@@ -20,7 +36,7 @@ function searchSongs() {
                     el.authors.forEach(author => {
                         htmlContent += author.name + ', ';
                     });
-                    htmlContent += "<td><a href='http://api.guitarparty.com" + el.uri + "'>View</a></td>";
+                    htmlContent += "<td><a class='view-song' href='http://api.guitarparty.com" + el.uri + "'>View</a></td>";
                     htmlContent += "</td>";
                     htmlContent += "</tr>";
                 });
@@ -34,9 +50,16 @@ function searchSongs() {
     });
 }
 
-$(document).ready(function () {
-    $('#song-search').submit(function (e) {
-        e.preventDefault();
-        searchSongs();
+function viewSong(songURL) {
+    $.ajax({
+        type: "GET",
+        url: songURL,
+        success: function (response) {
+            var htmlContent = "";
+            htmlContent += response.body_chords_html;
+            $('#song-body').html(htmlContent);
+        }
+    }).then(function () {
+        $('#song-modal').modal('toggle');
     });
-});
+}
