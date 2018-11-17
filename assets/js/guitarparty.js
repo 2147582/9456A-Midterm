@@ -12,17 +12,22 @@ function searchSongs() {
         url: "http://api.guitarparty.com/v2/songs/?query=" + searchString,
         success: function (response) {
             var htmlContent = "";
-            response.objects.forEach(el => {
-                htmlContent += "<tr>";
-                htmlContent += "<td>" + el.title + "</td>";
-                htmlContent += "<td>";
-                el.authors.forEach(author => {
-                    htmlContent += author.name + ', ';
+            if (response.objects_count > 0) {
+                response.objects.forEach(el => {
+                    htmlContent += "<tr>";
+                    htmlContent += "<td>" + el.title + "</td>";
+                    htmlContent += "<td>";
+                    el.authors.forEach(author => {
+                        htmlContent += author.name + ', ';
+                    });
+                    htmlContent += "<td><a href='http://api.guitarparty.com" + el.uri + "'>View</a></td>";
+                    htmlContent += "</td>";
+                    htmlContent += "</tr>";
                 });
-                htmlContent += "<td><a href='http://api.guitarparty.com" + el.uri + "'>View</a></td>";
-                htmlContent += "</td>";
-                htmlContent += "</tr>";
-            });
+            } else {
+                $('#notfound').html('<div class="alert alert-danger" role="alert">Sorry song or author not found!</div>');
+            }
+
 
             $('#song-table-body').html(htmlContent);
         }
@@ -30,7 +35,7 @@ function searchSongs() {
 }
 
 $(document).ready(function () {
-    $('#search-btn').click(function (e) {
+    $('#song-search').submit(function (e) {
         e.preventDefault();
         searchSongs();
     });
