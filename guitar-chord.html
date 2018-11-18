@@ -101,12 +101,10 @@
 
 			function getChord(id) {
 				ch = $(id).val();
-				console.log(ch);
 			}
 
 			function getVar(id) {
 				va = $(id).val();
-				console.log(va);
 			}
 
 			initChords();
@@ -142,7 +140,7 @@
 						);
 						var htmlContent = '<canvas id="chord-content" class="chord" chord="' + selectedChordCanvas +
 							'" width="180" height="200"></canvas>';
-						htmlContent += '<div class="chord-audio" chord="' + selectedChord + '"></div>';
+						htmlContent += '<br><div class="chord-audio" chord="' + selectedChord + '"></div>';
 						$('.chord-container').html(htmlContent);
 						initChords();
 						chordAudio();
