@@ -63,8 +63,8 @@
     <div class="container">
 
         <h2 style="text-align: center;padding: 5% 0;">Sample Song Lyrics</h2>
-        
-        
+
+
         <nav class="navbar navbar-light bg-light justify-content-between">
 
             <a class="navbar-brand"></a>
@@ -72,12 +72,13 @@
 
             <form class="form-inline" id="song-search">
 
-                <input id="search-text" class="form-control mb-2 mr-sm-2" type="search" placeholder="Enter Title or Artist" aria-label="Search">
+                <input id="search-text" class="form-control mb-2 mr-sm-2" type="search" placeholder="Enter Title or Artist"
+                    aria-label="Search">
                 <button id="search-btn" class="btn btn-outline-primary mb-2 mr-sm-2" type="submit">Search</button>
             </form>
         </nav>
-        
-        
+
+
         <div class="row justify-content-center">
 
             <div class="col-lg-12">
@@ -87,11 +88,20 @@
                             <tr>
                                 <th scope="col">Title</th>
                                 <th scope="col">Author</th>
-                                <th align="col">Action</th>
+                                <th scope="col">Action</th>
                             </tr>
                         </thead>
                         <tbody id="song-table-body">
-
+                            <tr>
+                                <td>All of me</td>
+                                <td>John Legend</td>
+                                <td><a class='view-song' href='http://api.guitarparty.com/v2/songs/23561/'>View</a></td>
+                            </tr>
+                            <tr>
+                                <td>Perfect</td>
+                                <td>Ed Sheeran</td>
+                                <td><a class='view-song' href='http://api.guitarparty.com/v2/songs/23561/'>View</a></td>
+                            </tr>
                         </tbody>
                     </table>
                     <div id="notfound"></div>
