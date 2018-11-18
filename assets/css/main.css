@@ -34,7 +34,7 @@
     margin-left: 1%;
   }
 
-  input:checked + .blue{
+  button input:checked{
     background-color: #2d67be;
   }
 
