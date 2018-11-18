@@ -1,0 +1,162 @@
+[{
+        "question": "<canvas class='chord' chord='A#' width='180' height='200'></canvas>",
+        "rightAnswer": "A#",
+        "wrongAnswer1": "E",
+        "wrongAnswer2": "Am",
+        "wrongAnswer3": "F"
+    },
+    {
+        "question": "<canvas class='chord' chord='D#' width='180' height='200'></canvas>",
+        "rightAnswer": "D#",
+        "wrongAnswer1": "E#",
+        "wrongAnswer2": "Am",
+        "wrongAnswer3": "Dm"
+    },
+    {
+        "question": "<canvas class='chord' chord='C#_m' width='180' height='200'></canvas>",
+        "rightAnswer": "C#m",
+        "wrongAnswer1": "Aadd9",
+        "wrongAnswer2": "Am",
+        "wrongAnswer3": "Dm"
+    },
+    {
+        "question": "<canvas class='chord' chord='F#_m7' width='180' height='200'></canvas>",
+        "rightAnswer": "F#m7",
+        "wrongAnswer1": "A",
+        "wrongAnswer2": "F7",
+        "wrongAnswer3": "Dm"
+    },
+    {
+        "question": "<canvas class='chord' chord='F_add9' width='180' height='200'></canvas>",
+        "rightAnswer": "Fadd9",
+        "wrongAnswer1": "A",
+        "wrongAnswer2": "Em7",
+        "wrongAnswer3": "Dm"
+    },
+    {
+        "question": "<canvas class='chord' chord='A_7' width='180' height='200'></canvas>",
+        "rightAnswer": "A7",
+        "wrongAnswer1": "A",
+        "wrongAnswer2": "F",
+        "wrongAnswer3": "E7"
+    },
+    {
+        "question": "<canvas class='chord' chord='C_7' width='180' height='200'></canvas>",
+        "rightAnswer": "C7",
+        "wrongAnswer1": "A",
+        "wrongAnswer2": "Am",
+        "wrongAnswer3": "Dm"
+    },
+    {
+        "question": "<canvas class='chord' chord='F' width='180' height='200'></canvas>",
+        "rightAnswer": "F",
+        "wrongAnswer1": "E",
+        "wrongAnswer2": "Am7",
+        "wrongAnswer3": "Dm"
+    },
+    {
+        "question": "<canvas class='chord' chord='D_m' width='180' height='200'></canvas>",
+        "rightAnswer": "Dm",
+        "wrongAnswer1": "A",
+        "wrongAnswer2": "Am",
+        "wrongAnswer3": "F"
+    },
+    {
+        "question": "<canvas class='chord' chord='D_m' width='180' height='200'></canvas>",
+        "rightAnswer": "Dm",
+        "wrongAnswer1": "E",
+        "wrongAnswer2": "Am",
+        "wrongAnswer3": "Fadd9"
+    },
+    {
+        "question": "<canvas class='chord' chord='A' width='180' height='200'></canvas>",
+        "rightAnswer": "A",
+        "wrongAnswer1": "E#7",
+        "wrongAnswer2": "Am7",
+        "wrongAnswer3": "F"
+    },
+    {
+        "question": "<canvas class='chord' chord='G_add9' width='180' height='200'></canvas>",
+        "rightAnswer": "Gadd9",
+        "wrongAnswer1": "Eadd9",
+        "wrongAnswer2": "A#add9",
+        "wrongAnswer3": "Fm7"
+    },
+    {
+        "question": "<canvas class='chord' chord='D_m7' width='180' height='200'></canvas>",
+        "rightAnswer": "Dm7",
+        "wrongAnswer1": "E7",
+        "wrongAnswer2": "Cm7",
+        "wrongAnswer3": "B#"
+    },
+    {
+        "question": "<canvas class='chord' chord='B_m7' width='180' height='200'></canvas>",
+        "rightAnswer": "Bm7",
+        "wrongAnswer1": "C",
+        "wrongAnswer2": "F#m",
+        "wrongAnswer3": "D"
+    },
+    {
+        "question": "<canvas class='chord' chord='D#_m7' width='180' height='200'></canvas>",
+        "rightAnswer": "D#m7",
+        "wrongAnswer1": "G#m",
+        "wrongAnswer2": "Cadd9",
+        "wrongAnswer3": "F7"
+    },
+    {
+        "question": "<canvas class='chord' chord='E_m7' width='180' height='200'></canvas>",
+        "rightAnswer": "Em7",
+        "wrongAnswer1": "E7",
+        "wrongAnswer2": "B#m7",
+        "wrongAnswer3": "B"
+    },
+    {
+        "question": "<canvas class='chord' chord='A#_m' width='180' height='200'></canvas>",
+        "rightAnswer": "A#m",
+        "wrongAnswer1": "A",
+        "wrongAnswer2": "Am",
+        "wrongAnswer3": "Aadd9"
+    },
+    {
+        "question": "<canvas class='chord' chord='B_add9' width='180' height='200'></canvas>",
+        "rightAnswer": "Badd9",
+        "wrongAnswer1": "Eadd9",
+        "wrongAnswer2": "Am",
+        "wrongAnswer3": "Fadd9"
+    },
+    {
+        "question": "<canvas class='chord' chord='E_7' width='180' height='200'></canvas>",
+        "rightAnswer": "E7",
+        "wrongAnswer1": "E",
+        "wrongAnswer2": "A",
+        "wrongAnswer3": "F"
+    },
+    {
+        "question": "<canvas class='chord' chord='A_m' width='180' height='200'></canvas>",
+        "rightAnswer": "Am",
+        "wrongAnswer1": "E",
+        "wrongAnswer2": "Bm",
+        "wrongAnswer3": "F"
+    },
+    {
+        "question": "<canvas class='chord' chord='G#' width='180' height='200'></canvas>",
+        "rightAnswer": "G#",
+        "wrongAnswer1": "E",
+        "wrongAnswer2": "Am",
+        "wrongAnswer3": "F"
+    },
+    {
+        "question": "<canvas class='chord' chord='G' width='180' height='200'></canvas>",
+        "rightAnswer": "G",
+        "wrongAnswer1": "B",
+        "wrongAnswer2": "C",
+        "wrongAnswer3": "D"
+    },
+    {
+        "question": "<canvas class='chord' chord='A_m7' width='180' height='200'></canvas>",
+        "rightAnswer": "Am7",
+        "wrongAnswer1": "A7",
+        "wrongAnswer2": "Aadd9",
+        "wrongAnswer3": "A#"
+    }
+]
