@@ -58,16 +58,10 @@ function btnProvideQuestion() {
 
     var chords;
 
-    //get json from root directory/js/chords.json
-    $.getJSON("assets/js/chords.json", function (data) {
-        chords = data;
-    }).then(function () {
-        $('.chord').each(function () {
-            var chord = $(this).attr('chord');
-            drawBlankChord(chord, this, chords);
-        })
-
-    });
+    $('.chord').each(function () {
+        var chord = $(this).attr('chord');
+        drawBlankChord(chord, this);
+    })
 }
 
 function answerA_clicked() {
