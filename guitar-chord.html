@@ -59,31 +59,29 @@
 
 			<div class="diagram">
 
-				<button type="button" class="blue btn btn-secondary"><input type="radio" name="ch" value="A" id="A" checked><label for="A">A</label></button>
-				<button type="button" class="btn btn-secondary"><input type="radio" name="ch" value="A#" id="A#"><label for="A#">A#</label></button>
-				<button type="button" class="btn btn-secondary"><input type="radio" name="ch" value="B" id="B"><label for="B">B</label></button>
-				<button type="button" class="btn btn-secondary"><input type="radio" name="ch" value="C" id="C"><label for="C">C</label></button>
-				<button type="button" class="btn btn-secondary"><input type="radio" name="ch" value="C#" id="C#"><label for="C#">C#</label></button>
-				<button type="button" class="btn btn-secondary"><input type="radio" name="ch" value="D" id="D"><label for="D">D</label></button>
-				<button type="button" class="btn btn-secondary"><input type="radio" name="ch" value="D#" id="D#"><label for="D#">D#</label></button>
-				<button type="button" class="btn btn-secondary"><input type="radio" name="ch" value="E" id="E"><label for="E">E</label></button>
-				<button type="button" class="btn btn-secondary"><input type="radio" name="ch" value="F" id="F"><label for="F">F</label></button>
-				<button type="button" class="btn btn-secondary"><input type="radio" name="ch" value="F#" id="F#"><label for="F#">F#</label></button>
-				<button type="button" class="btn btn-secondary"><input type="radio" name="ch" value="G" id="G"><label for="G">G</label></button>
-				<button type="button" class="btn btn-secondary"><input type="radio" name="ch" value="G#" id="G#"><label for="G#">G#</label></button>
+				<button type="button" onclick="getChord(A)" class="blue btn btn-secondary"><input type="radio" name="ch" value="A" id="A" checked><label for="A">A</label></button>
+				<button type="button" onclick="getChord(As)" class="btn btn-secondary"><input type="radio" name="ch" value="A#" id="As"><label for="As">A#</label></button>
+				<button type="button" onclick="getChord(B)" class="btn btn-secondary"><input type="radio" name="ch" value="B" id="B"><label for="B">B</label></button>
+				<button type="button" onclick="getChord(C)" class="btn btn-secondary"><input type="radio" name="ch" value="C" id="C"><label for="C">C</label></button>
+				<button type="button" onclick="getChord(Cs)" class="btn btn-secondary"><input type="radio" name="ch" value="C#" id="Cs"><label for="Cs">C#</label></button>
+				<button type="button" onclick="getChord(D)" class="btn btn-secondary"><input type="radio" name="ch" value="D" id="D"><label for="D">D</label></button>
+				<button type="button" onclick="getChord(Ds)" class="btn btn-secondary"><input type="radio" name="ch" value="D#" id="Ds"><label for="Ds">D#</label></button>
+				<button type="button" onclick="getChord(E)" class="btn btn-secondary"><input type="radio" name="ch" value="E" id="E"><label for="E">E</label></button>
+				<button type="button" onclick="getChord(F)" class="btn btn-secondary"><input type="radio" name="ch" value="F" id="F"><label for="F">F</label></button>
+				<button type="button" onclick="getChord(Fs)" class="btn btn-secondary"><input type="radio" name="ch" value="F#" id="Fs"><label for="Fs">F#</label></button>
+				<button type="button" onclick="getChord(G)" class="btn btn-secondary"><input type="radio" name="ch" value="G" id="G"><label for="G">G</label></button>
+				<button type="button" onclick="getChord(Gs)" class="btn btn-secondary"><input type="radio" name="ch" value="G#" id="Gs"><label for="Gs">G#</label></button>
 			</div>
 
 			<hr class="my-2">
 
 			<div class="var">
 
-				<button type="button" class="btn btn-secondary"><input type="radio" name="variety" value="" id="major" checked><label
-					 for="major">major</label></button>
-				<button type="button" class="btn btn-secondary"><input type="radio" name="variety" value="m" id="minor"><label for="minor">minor</label></button>
-				<button type="button" class="btn btn-secondary"><input type="radio" name="variety" value="m7" id="m7"><label for="m7">m7</label></button>
-				<button type="button" class="btn btn-secondary"><input type="radio" name="variety" value="7" id="7"><label for="7">7</label></button>
-				<button type="button" class="btn btn-secondary"><input type="radio" name="variety" value="add9" id="add9"><label
-					 for="add9">add9</label></button>
+				<button type="button" onclick="getVar(major)" class="btn btn-secondary"><input type="radio" name="variety" value="" id="major" checked><label for="major">major</label></button>
+				<button type="button" onclick="getVar(minor)" class="btn btn-secondary"><input type="radio" name="variety" value="m" id="minor"><label for="minor">minor</label></button>
+				<button type="button" onclick="getVar(m7)" class="btn btn-secondary"><input type="radio" name="variety" value="m7" id="m7"><label for="m7">m7</label></button>
+				<button type="button" onclick="getVar(seven)" class="btn btn-secondary"><input type="radio" name="variety" value="7" id="seven"><label for="7">7</label></button>
+				<button type="button" onclick="getVar(add9)" class="btn btn-secondary"><input type="radio" name="variety" value="add9" id="add9"><label for="add9">add9</label></button>
 
 			</div>
 
@@ -99,17 +97,18 @@
 		<script src="assets/js/drawchord.js"></script>
 		<script src="assets/js/chordaudio.js"></script>
 		<script>
+			function getChord(id) {
+				var ch = $(id).val();
+			}
+			function getVar(id) {
+				var vary = $(id).val();
+			}
+
 			function initChords() {
-				var chords;
-				//get json from root directory/js/chords.json
-				$.getJSON("assets/js/chords.json", function (data) {
-					chords = data;
-				}).then(function () {
-					$('.chord').each(function () {
-						var chord = $(this).attr('chord');
-						drawChord(chord, this);
-					})
-				});
+				$('.chord').each(function () {
+					var chord = $(this).attr('chord');
+					drawChord(chord, this);
+				})
 			}
 
 			initChords();
