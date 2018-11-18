@@ -99,18 +99,6 @@
 		<script src="assets/js/drawchord.js"></script>
 		<script src="assets/js/chordaudio.js"></script>
 		<script>
-			function initChords() {
-				var chords;
-				//get json from root directory/js/chords.json
-				$.getJSON("assets/js/chords.json", function (data) {
-					chords = data;
-				}).then(function () {
-					$('.chord').each(function () {
-						var chord = $(this).attr('chord');
-						drawChord(chord, this);
-					})
-				});
-			}
 
 			initChords();
 			chordAudio();

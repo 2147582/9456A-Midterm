@@ -39,6 +39,7 @@ function drawChord(chordName, canvas) {
     $.getJSON("https://api.uberchord.com/v1/chords/" + chordName, function (data) {
         chord = data;
     }).then(function () {
+
         var cs = chord[0].strings;
 
         chordStrings = cs.split(' ').map(function (item) {
@@ -51,14 +52,16 @@ function drawChord(chordName, canvas) {
         });
 
         fret = Math.min.apply(Math, removeX(chordStrings));
+        if (fret > 0) {
+            chordStrings = chordStrings.map(function (item) {
+                if (item != "X") {
+                    return item - (fret - 1);
+                } else {
+                    return "X";
+                }
+            });
+        }
 
-        chordStrings = chordStrings.map(function (item) {
-            if (item != "X") {
-                return item - (fret - 1);
-            } else {
-                return "X";
-            }
-        });
 
         var f = chord[0].fingering;
 
@@ -106,19 +109,14 @@ function drawChord(chordName, canvas) {
             var x = stringWidth + offsetX - (stringWidth / 4);
 
             //draw the strings
+
             ctx.beginPath();
-            ctx.fillStyle = 'white';
-            ctx.fillRect(x, y - 10, 10, 10);
 
             ctx.moveTo(offsetX + stringWidth, 20 + fretHeight);
             ctx.lineTo(offsetX + stringWidth, 20 + stringH + fretHeight);
 
             ctx.fillStyle = 'black';
-            if (fret != 0 && chordFingering[i] != 0) {
-                ctx.fillText(chordFingering[i], x, y + 20);
-            } else {
-                ctx.fillText(chordFingering[i], x, y + 20);
-            }
+            ctx.fillText(chordFingering[i], x, y + 20);
 
             ctx.stroke();
 
@@ -128,7 +126,7 @@ function drawChord(chordName, canvas) {
             }
             var offsetX = offsetX + stringWidth;
         }
-        displayName = chord[0].chordName.replace(/,/g, '');
+        displayName = chord[0].enharmonicChordName.replace(/,/g, '');
         ctx.fillText(displayName, 63, (maxPos - minPos + 4) * fretHeight);
         ctx.font = "14px Arial";
         ctx.fillText('E', stringWidth - 5, 15);
