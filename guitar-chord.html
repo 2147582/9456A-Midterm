@@ -77,11 +77,13 @@
 
 			<div class="var">
 
-				<button type="button" class="btn btn-secondary"><input type="radio" name="variety" value="" id="major" checked><label for="major">major</label></button>
+				<button type="button" class="btn btn-secondary"><input type="radio" name="variety" value="" id="major" checked><label
+					 for="major">major</label></button>
 				<button type="button" class="btn btn-secondary"><input type="radio" name="variety" value="m" id="minor"><label for="minor">minor</label></button>
 				<button type="button" class="btn btn-secondary"><input type="radio" name="variety" value="m7" id="m7"><label for="m7">m7</label></button>
 				<button type="button" class="btn btn-secondary"><input type="radio" name="variety" value="7" id="7"><label for="7">7</label></button>
-				<button type="button" class="btn btn-secondary"><input type="radio" name="variety" value="add9" id="add9"><label for="add9">add9</label></button>
+				<button type="button" class="btn btn-secondary"><input type="radio" name="variety" value="add9" id="add9"><label
+					 for="add9">add9</label></button>
 
 			</div>
 
@@ -116,12 +118,13 @@
 			$('#diagram label').each(function () {
 				$(this).click(function (e) {
 					window.setTimeout(function () {
+						var selectedChordCanvas = $('[name=ch]:checked').val() + '_' + $('[name=variety]:checked').val();
 						var selectedChord = $('[name=ch]:checked').val() + $('[name=variety]:checked').val();
 						$('.chord-container').html(
-							'<canvas id="chord-content" class="chord" chord="' + selectedChord +
+							'<canvas id="chord-content" class="chord" chord="' + selectedChordCanvas +
 							'" width="200" height="200"></canvas>'
 						);
-						var htmlContent = '<canvas id="chord-content" class="chord" chord="' + selectedChord +
+						var htmlContent = '<canvas id="chord-content" class="chord" chord="' + selectedChordCanvas +
 							'" width="180" height="200"></canvas>';
 						htmlContent += '<div class="chord-audio" chord="' + selectedChord + '"></div>';
 						$('.chord-container').html(htmlContent);
