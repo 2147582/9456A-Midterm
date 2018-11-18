@@ -27,47 +27,31 @@ function initChords() {
     });
 }
 
-function drawChord(chordName, canvas) {
+function drawChord(chordName, canvas, arr = chords) {
     var c = canvas;
     var ctx = c.getContext('2d');
 
     ctx.font = "18px Arial";
 
     var chord;
-    var chordStrings;
-    var chordFingering;
-    var fret;
-    $.getJSON("https://api.uberchord.com/v1/chords/" + chordName, function (data) {
-        chord = data;
-    }).then(function () {
-        var cs = chord[0].strings;
-
-        chordStrings = cs.split(' ').map(function (item) {
-            return parseInt(item, 10);
-        });
-
-        var f = chord[0].fingering;
-
-        chordFingering = f.split(' ').map(function (item) {
-            return parseInt(item, 10);
-        });
-
-        fret = Math.min.apply(Math, removeX(chordStrings));
-    });
-
-
-
     var offsetY = 20;
     var offsetX = 0;
 
-    var maxPos = Math.max.apply(Math, removeX(chordStrings)) + 1;
-    var minPos = Math.min.apply(Math, removeX(chordStrings));
-    console.log(chord.strings);
+
+    for (n = 0; n <= arr.list.length - 1; n++) {
+        if (arr.list[n].name + arr.list[n].type == chordName) {
+            chord = arr.list[n];
+        }
+    }
+
+    var maxPos = Math.max.apply(Math, removeX(chord.placement)) + 1;
+    var minPos = Math.min.apply(Math, removeX(chord.placement));
+    console.log(chord.placement);
 
     for (f = minPos; f <= maxPos + 1; f++) {
         ctx.beginPath();
 
-        if (f == minPos && fret == 0) {
+        if (f == minPos && chord.fret == 0) {
             ctx.lineWidth = 4;
         } else {
             ctx.lineWidth = 1;
@@ -81,13 +65,13 @@ function drawChord(chordName, canvas) {
         var offsetY = offsetY + 20;
     }
 
-    for (i = 0; i < chordStrings; i++) {
+    for (i = 0; i < chord.placement.length; i++) {
         var stringH = (maxPos - minPos + 1) * fretHeight;
 
         if (chord.placement[i] == 'x') {
             var y = fretHeight + textOffsetY;
         } else {
-            var y = (fretHeight * chordStrings[i]) + fretHeight + textOffsetY;
+            var y = (fretHeight * chord.placement[i]) + fretHeight + textOffsetY;
         }
 
         var x = stringWidth + offsetX - (stringWidth / 4);
@@ -101,22 +85,21 @@ function drawChord(chordName, canvas) {
         ctx.lineTo(offsetX + stringWidth, 20 + stringH + fretHeight);
 
         ctx.fillStyle = 'black';
-        if (chord.fret != 0 && chordFingering[i] != 0) {
-            ctx.fillText(chordFingering[i], x, y + 20);
+        if (chord.fret != 0 && chord.fingering[i] != 0) {
+            ctx.fillText(chord.fingering[i], x, y + 20);
         } else {
-            ctx.fillText(chordFingering, x, y + 20);
+            ctx.fillText(chord.fingering[i], x, y + 20);
         }
 
         ctx.stroke();
 
-        if (i == chordStrings.length - 1 && chord.fret != 0) {
+        if (i == chord.placement.length - 1 && chord.fret != 0) {
 
             ctx.fillText(chord.fret + ' fret', x + 20, y + 20);
         }
         var offsetX = offsetX + stringWidth;
     }
-    displayName = chord[0].chordName.replace(',', '');
-    ctx.fillText(displayName, 63, (maxPos - minPos + 4) * fretHeight);
+    ctx.fillText(chord.name + chord.type, 63, (maxPos - minPos + 4) * fretHeight);
     ctx.font = "14px Arial";
     ctx.fillText('E', stringWidth - 5, 15);
     ctx.fillText('A', (stringWidth * 2) - 5, 15);
@@ -128,7 +111,7 @@ function drawChord(chordName, canvas) {
     ctx.font = "18px Arial";
 }
 
-//not yet modified
+
 function drawBlankChord(chordName, canvas, arr = chords) {
     var c = canvas;
     var ctx = c.getContext('2d');
@@ -187,17 +170,17 @@ function drawBlankChord(chordName, canvas, arr = chords) {
         ctx.lineTo(offsetX + stringWidth, 20 + stringH + fretHeight);
 
         ctx.fillStyle = 'black';
-        if (chord.fret != 0 && chordFingering[i] != 0) {
-            ctx.fillText(chordFingering[i], x, y + 20);
+        if (chord.fret != 0 && chord.fingering[i] != 0) {
+            ctx.fillText(chord.fingering[i], x, y + 20);
         } else {
-            ctx.fillText(chordFingering[i], x, y + 20);
+            ctx.fillText(chord.fingering[i], x, y + 20);
         }
 
         ctx.stroke();
 
-        if (i == chordStrings.length - 1 && fret != 0) {
+        if (i == chord.placement.length - 1 && chord.fret != 0) {
 
-            ctx.fillText(fret + ' fret', x + 20, y + 20);
+            ctx.fillText(chord.fret + ' fret', x + 20, y + 20);
         }
         var offsetX = offsetX + stringWidth;
     }
