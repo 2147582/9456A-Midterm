@@ -14,16 +14,14 @@ function removeX(array) {
     return cleanArray;
 }
 
+function fixFret() {
+
+}
+
 function initChords() {
-    var chords;
-    //get json from root directory/js/chords.json
-    $.getJSON("assets/js/chords.json", function (data) {
-        chords = data;
-    }).then(function () {
-        $('.chord').each(function () {
-            var chord = $(this).attr('chord');
-            drawChord(chord, this, chords);
-        })
+    $('.chord').each(function () {
+        var chord = $(this).attr('chord');
+        drawChord(chord, this);
     });
 }
 
@@ -52,6 +50,16 @@ function drawChord(chordName, canvas) {
 
         });
 
+        fret = Math.min.apply(Math, removeX(chordStrings));
+
+        chordStrings = chordStrings.map(function (item) {
+            if (item != "X") {
+                return item - (fret - 1);
+            } else {
+                return "X";
+            }
+        });
+
         var f = chord[0].fingering;
 
         chordFingering = f.split(' ').map(function (item) {
@@ -61,8 +69,9 @@ function drawChord(chordName, canvas) {
                 return "X";
             }
         });
-        
-        fret = Math.min.apply(Math, removeX(chordStrings));
+
+
+
         var offsetY = 20;
         var offsetX = 0;
 
