@@ -116,7 +116,11 @@ function drawChord(chordName, canvas) {
             ctx.lineTo(offsetX + stringWidth, 20 + stringH + fretHeight);
 
             ctx.fillStyle = 'black';
-            ctx.fillText(chordFingering[i], x, y + 20);
+            if (chordFingering[i] == 'X' && chordStrings[i] != 'X') {
+                ctx.fillText(0, x, y + 20);
+            } else {
+                ctx.fillText(chordFingering[i], x, y + 20);
+            }
 
             ctx.stroke();
 
@@ -126,7 +130,11 @@ function drawChord(chordName, canvas) {
             }
             var offsetX = offsetX + stringWidth;
         }
+
         displayName = chord[0].enharmonicChordName.replace(/,/g, '');
+        if (displayName.includes('b')) {
+            displayName = chord[0].chordName.replace(/,/g, '');
+        }
         ctx.fillText(displayName, 63, (maxPos - minPos + 4) * fretHeight);
         ctx.font = "14px Arial";
         ctx.fillText('E', stringWidth - 5, 15);
@@ -236,7 +244,13 @@ function drawBlankChord(chordName, canvas) {
             ctx.lineTo(offsetX + stringWidth, 20 + stringH + fretHeight);
 
             ctx.fillStyle = 'black';
-            ctx.fillText(chordFingering[i], x, y + 20);
+
+            if (chordFingering[i] == 'X' && chordStrings[i] != 'X') {
+                ctx.fillText(0, x, y + 20);
+            } else {
+                ctx.fillText(chordFingering[i], x, y + 20);
+            }
+
 
             ctx.stroke();
 
@@ -246,7 +260,7 @@ function drawBlankChord(chordName, canvas) {
             }
             var offsetX = offsetX + stringWidth;
         }
-        displayName = chord[0].enharmonicChordName.replace(/,/g, '');
+
         ctx.font = "14px Arial";
         ctx.fillText('E', stringWidth - 5, 15);
         ctx.fillText('A', (stringWidth * 2) - 5, 15);
