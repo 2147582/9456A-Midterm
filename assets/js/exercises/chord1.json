@@ -1,5 +1,5 @@
 [{
-        "question": "<canvas class='chord' chord='Em' width='180' height='200'></canvas>",
+        "question": "<canvas class='chord' chord='E_m' width='180' height='200'></canvas>",
         "rightAnswer": "Em",
         "wrongAnswer1": "D",
         "wrongAnswer2": "G",
