@@ -99,6 +99,10 @@
 			var ch = "A";
 			var va = "";
 
+			/*
+			Script for storing the values
+			added by: Gregorio, Marc Lawrence
+			*/
 			function getChord(id) {
 				ch = $(id).val();
 			}
@@ -109,7 +113,11 @@
 
 			initChords();
 			chordAudio();
-
+			/*
+			Script for rendering the chord based from the collected values
+			Added by: Ballares, Justine Paul
+			Modified by: Gregorio, Marc Lawrence
+			*/
 			$('.diagram button').each(function() {
 				$(this).click(function(e) {
 					window.setTimeout(function() {
