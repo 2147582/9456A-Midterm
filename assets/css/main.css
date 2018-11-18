@@ -34,8 +34,8 @@
     margin-left: 1%;
   }
 
-  input:checked+label{
-    background-color: #adafb2;
+  input:checked + .blue{
+    background-color: #2d67be;
   }
 
   /*
