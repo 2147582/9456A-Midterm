@@ -100,7 +100,12 @@
                             <tr>
                                 <td>Perfect</td>
                                 <td>Ed Sheeran</td>
-                                <td><a class='view-song' href='http://api.guitarparty.com/v2/songs/23561/'>View</a></td>
+                                <td><a class='view-song' href='http://api.guitarparty.com/v2/songs/25169/'>View</a></td>
+                            </tr>
+                            <tr>
+                                <td>I'm yours</td>
+                                <td>Jason Mraz</td>
+                                <td><a class='view-song' href='http://api.guitarparty.com/v2/songs/2403/'>View</a></td>
                             </tr>
                         </tbody>
                     </table>
@@ -114,19 +119,32 @@
             <div class="modal-dialog modal-full" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">Song Title</h5>
+                        <div style="margin: auto;">
+                            <h5 class="modal-title" id="song-title">Song Title</h5>
+                            <p id="song-authors"></p>
+                        </div>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    <div class="modal-body" id="song-body">
-
+                    <div class="modal-body">
+                        <div>
+                            <div id="chord-list"></div>
+                            <div id="song-body"></div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <!-- <img src="assets/img/cover.jpg" style="height: 300px; width: 600px;"> -->
     </div>
+    <script>
+        $('.view-song').click(function (e) {
+            e.preventDefault();
+            var songURL = $(this).attr('href');
+            viewSong(songURL);
+        });
+    </script>
     <script src="assets/js/guitarparty.js"></script>
 </body>
 

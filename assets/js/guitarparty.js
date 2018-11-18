@@ -55,9 +55,24 @@ function viewSong(songURL) {
         type: "GET",
         url: songURL,
         success: function (response) {
-            var htmlContent = "";
-            htmlContent += response.body_chords_html;
-            $('#song-body').html(htmlContent);
+            var songBody = "";
+            var chordList = "";
+            var authors = "Authors: ";
+            var chordList = "Chords: ";
+            response.authors.forEach(el => {
+                authors += el.name + ",";
+            });
+            
+            for(let x = 0; x < response.chords.length; x++){
+                debugger;
+                chordList += response.chords[x].name + "\t";
+            }
+
+            songBody += response.body_chords_html;
+            $('#song-title').html(response.title);
+            $('#song-authors').html(authors);
+            $('#chord-list').html(chordList);
+            $('#song-body').html(songBody);
         }
     }).then(function () {
         $('#song-modal').modal('toggle');
