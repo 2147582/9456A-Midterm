@@ -24,7 +24,8 @@
 </head>
 
 <body>
-	<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark"> <!-- Added by: Baterina, Albert Lexter | All associated tags in Navbar -->
+	<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+		<!-- Added by: Baterina, Albert Lexter | All associated tags in Navbar -->
 		<a class="navbar-brand" href="index.html">
 			<img src="assets/img/GT.png" style="height: 40px; width: 40px;">
 		</a>
@@ -61,6 +62,7 @@
 		<h2 style="text-align: center;padding-top: 5%;"> Chord Exercise </h2>
 		<div class="row justify-content-center">
 
+			<!-- Level selection for the user -->
 			<div class="col-lg-3">
 				<div class="list-group" id="list-tab" role="tablist">
 					<a class="level list-group-item list-group-item-action active" data-toggle="list" href="#list-home" role="tab"
@@ -90,6 +92,7 @@
 
 							</div>
 							<div class="mx-auto">
+								<!-- Container for the exercise that will be populated when the script is loaded -->
 								<div id="exercise-container">
 									<div class="row" style="font-size: 1.5em;">
 										<div class="col-sm-6">Score</div>
@@ -106,7 +109,7 @@
 									</div>
 
 									<div class="row">
-
+										<!-- Button for the exercises which will be clicked by the user to trigger the exercise event -->
 										<div class="col-sm-6" style="margin: 5px 0;">
 											<button id="answerA" class="btn btn-primary" onclick="answerA_clicked()" style="width: 100%"></button>
 										</div>
