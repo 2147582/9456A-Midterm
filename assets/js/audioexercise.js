@@ -1,3 +1,8 @@
+/**
+ * Script necessary to play audio exercise
+ * Added by: Ballares, Justine
+ */
+
 //variables
 var quiz;
 var randomQuestion;
@@ -79,7 +84,6 @@ function answerD_clicked() {
 }
 
 function adjustScore(isCorrect) {
-    // debugger;
     total++;
     if (isCorrect) {
         currentScore++;
@@ -87,9 +91,6 @@ function adjustScore(isCorrect) {
     } else {
         incorrect++;
         streak = 0;
-        // if (currentScore > 0) {
-        //     currentScore--;
-        // }
     }
     document.getElementById("score").innerHTML = currentScore;
 }

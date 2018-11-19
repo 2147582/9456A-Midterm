@@ -1,3 +1,8 @@
+/**
+ * Searching of songs using guitarparty
+ * Added by: Ballares, Justine
+ */
+
 var API_KEY = 'ed09cac3481bed883129a60d90b65b9af0b435be';
 $.ajaxSetup({
     beforeSend: function (xhr) {

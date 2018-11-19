@@ -1,3 +1,8 @@
+/**
+ * Drawing of diagram using canvas
+ * Added by: Ballares, Justine
+ */
+
 var fretHeight = 20;
 var stringWidth = 20;
 var textOffsetY = -3;

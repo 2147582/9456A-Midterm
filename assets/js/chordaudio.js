@@ -1,3 +1,8 @@
+/**
+ * Script for playing audio of chords
+ * Addeded by: Ballares, Justine
+ */
+
 function play(chord) {
     var audio = $('audio[chord="' + chord + '"]')[0];
     audio.currentTime = 0;
