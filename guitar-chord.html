@@ -54,32 +54,35 @@
 
 			<h1 class="display-6">Chord Diagram</h1>
 			<br>
-
+			<!--
+			Buttons for the chord choices
+			added by: Gregorio, Marc Lawrence
+			-->
 			<div class="diagram">
 
-				<button type="button" onclick="getChord(A)" class="btn btn-secondary" value="A" id="A">A</button>
-				<button type="button" onclick="getChord(As)" class="btn btn-secondary" value="A#" id="As">A#</button>
-				<button type="button" onclick="getChord(B)" class="btn btn-secondary" value="B" id="B">B</button>
-				<button type="button" onclick="getChord(C)" class="btn btn-secondary" value="C" id="C">C</button>
-				<button type="button" onclick="getChord(Cs)" class="btn btn-secondary" value="C#" id="Cs">C#</button>
-				<button type="button" onclick="getChord(D)" class="btn btn-secondary" value="D" id="D">D</button>
-				<button type="button" onclick="getChord(Ds)" class="btn btn-secondary" value="D#" id="Ds">D#</button>
-				<button type="button" onclick="getChord(E)" class="btn btn-secondary" value="E" id="E">E</button>
-				<button type="button" onclick="getChord(F)" class="btn btn-secondary" value="F" id="F">F</button>
-				<button type="button" onclick="getChord(Fs)" class="btn btn-secondary" value="F#" id="Fs">F#</button>
-				<button type="button" onclick="getChord(G)" class="btn btn-secondary"value="G" id="G">G</button>
-				<button type="button" onclick="getChord(Gs)" class="btn btn-secondary" value="G#" id="Gs">G#</button>
+				<button type="button" onclick="getChord(A)" class="ch btn btn-secondary actives" value="A" id="A">A</button>
+				<button type="button" onclick="getChord(As)" class="ch btn btn-secondary" value="A#" id="As">A#</button>
+				<button type="button" onclick="getChord(B)" class="ch btn btn-secondary" value="B" id="B">B</button>
+				<button type="button" onclick="getChord(C)" class="ch btn btn-secondary" value="C" id="C">C</button>
+				<button type="button" onclick="getChord(Cs)" class="ch btn btn-secondary" value="C#" id="Cs">C#</button>
+				<button type="button" onclick="getChord(D)" class="ch btn btn-secondary" value="D" id="D">D</button>
+				<button type="button" onclick="getChord(Ds)" class="ch btn btn-secondary" value="D#" id="Ds">D#</button>
+				<button type="button" onclick="getChord(E)" class="ch btn btn-secondary" value="E" id="E">E</button>
+				<button type="button" onclick="getChord(F)" class="ch btn btn-secondary" value="F" id="F">F</button>
+				<button type="button" onclick="getChord(Fs)" class="ch btn btn-secondary" value="F#" id="Fs">F#</button>
+				<button type="button" onclick="getChord(G)" class="ch btn btn-secondary" value="G" id="G">G</button>
+				<button type="button" onclick="getChord(Gs)" class="ch btn btn-secondary" value="G#" id="Gs">G#</button>
 			</div>
 
 			<hr class="my-2">
 
 			<div class="var">
 
-				<button type="button" onclick="getVar(major)" class="btn btn-secondary" value="" id="major">major</button>
-				<button type="button" onclick="getVar(minor)" class="btn btn-secondary" value="m" id="minor">minor</button>
-				<button type="button" onclick="getVar(m7)" class="btn btn-secondary" value="m7" id="m7">m7</button>
-				<button type="button" onclick="getVar(seven)" class="btn btn-secondary" value="7" id="seven">7</button>
-				<button type="button" onclick="getVar(add9)" class="btn btn-secondary" value="add9" id="add9">add9</button>
+				<button type="button" onclick="getVar(major)" class="va btn btn-secondary actives" value="" id="major">major</button>
+				<button type="button" onclick="getVar(minor)" class="va btn btn-secondary" value="m" id="minor">minor</button>
+				<button type="button" onclick="getVar(m7)" class="va btn btn-secondary" value="m7" id="m7">m7</button>
+				<button type="button" onclick="getVar(seven)" class="va btn btn-secondary" value="7" id="seven">7</button>
+				<button type="button" onclick="getVar(add9)" class="va btn btn-secondary" value="add9" id="add9">add9</button>
 
 			</div>
 
@@ -99,6 +102,14 @@
 			var ch = "A";
 			var va = "";
 
+			$(".ch").click(function() {
+				$(".ch").removeClass("actives");
+				$(this).addClass("actives");
+			});
+			$(".va").click(function() {
+				$(".va").removeClass("actives");
+				$(this).addClass("actives");
+			});
 			/*
 			Script for storing the values
 			added by: Gregorio, Marc Lawrence

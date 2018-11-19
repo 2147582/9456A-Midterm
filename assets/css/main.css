@@ -25,6 +25,7 @@
   /*
   Style for the Button size in Chord Diagram
   Added by: Baterina, Albert Lexter
+  Modified by:Gregorio, Marc Lawrence
   */
   .btn-secondary {
     height: 50px;
@@ -32,13 +33,8 @@
     margin: 1% 0.5%;
   }
 
-  .chords {
-    display: inline-block;
-    position: relative;
-    width: 0;
-    top: -1.3em;
-    left: 0;
-    font-weight: bold;
+  .actives {
+    background-color: green;
   }
 
   /*
@@ -56,6 +52,7 @@
     text-align: center;
     position: relative;
   }
+
 
 
   /*
@@ -105,7 +102,7 @@
     text-align: center;
   }
 
-  .container> h3, #about {
+  .container>h3, #about {
     text-align: center;
   }
 
@@ -147,19 +144,23 @@
     text-align: left;
     padding: 8px;
   }
+
   .table {
     width: 80%;
   }
+
   .view {
     width: 50%;
     display: block;
     margin: auto;
   }
+
   .modal-content {
     margin: auto;
     padding: 20px;
     width: 130%;
   }
+
   .modal-header {
     text-align: center;
   }
