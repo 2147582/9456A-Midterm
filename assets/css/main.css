@@ -37,16 +37,46 @@
     background-color: rgb(6, 70, 130);
   }
 
-  #par {
-    text-shadow: black 2px 2px;
-  }
+
   /*
   Style for the image in index.html
   Added by: Gregorio, Marc Lawrence
   Modified by: Baterina, Albert Lexter
   */
+  #par1 {
+    text-shadow: black 2px 2px;
+    color: white;
+  }
+  #par2 {
+    text-shadow: black 2px 2px;
+    color: white;
+  }
+  #par3 {
+    text-shadow: black 2px 2px;
+    color: yellow;
+  }
   #first {
-    background-image: url(../img/guitarist.jpeg);
+    background-image: url(../img/whol.jpg);
+    height: 600px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    text-align: center;
+    position: relative;
+  }
+  #second {
+    background-image: url(../img/guitarist2.jpeg);
+    height: 600px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    text-align: center;
+    position: relative;
+  }
+  #third {
+    background-image: url(../img/guitarista.jpeg);
     height: 600px;
     background-position: center;
     background-repeat: no-repeat;
