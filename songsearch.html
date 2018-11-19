@@ -62,7 +62,7 @@
 
     <div class="container">
 
-        <h2 style="text-align: center;padding: 5% 0;">Sample Song Lyrics</h2>
+        <h2 style="text-align: center;padding: 5% 0;">Song List</h2>
 
 
         <nav class="navbar navbar-light bg-light justify-content-between">
@@ -80,8 +80,8 @@
 
 
         <div class="row justify-content-center">
-
             <div class="col-lg-12">
+                <!-- Added by: Ballares, Justine -->
                 <div id="song-list">
                     <table class="table table-hover" style="width: 100%">
                         <thead>
@@ -115,6 +115,10 @@
 
         </div>
 
+        <!-- 
+            Modal for displaying the lyrics and chords of a song.
+            Added by: Ballares, Justine 
+        -->
         <div class="modal" tabindex="-1" role="dialog" id="song-modal">
             <div class="modal-dialog modal-full" role="document">
                 <div class="modal-content">
@@ -139,6 +143,10 @@
 
     </div>
     <script>
+        /*
+        Script that will add the content lyrics to the modal and display the modal.
+        Added by: Ballares, Justine
+        */
         $('.view-song').click(function (e) {
             e.preventDefault();
             var songURL = $(this).attr('href');
