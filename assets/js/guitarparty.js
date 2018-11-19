@@ -3,6 +3,9 @@
  * Added by: Ballares, Justine
  */
 
+/**
+ * Configuration for the guitarparty API
+ */
 var API_KEY = 'ed09cac3481bed883129a60d90b65b9af0b435be';
 $.ajaxSetup({
     beforeSend: function (xhr) {
@@ -11,12 +14,17 @@ $.ajaxSetup({
 });
 
 $(document).ready(function () {
+    /**
+     * Add function to search for songs to the form.
+     */
     $('#song-search').submit(function (e) {
         e.preventDefault();
         searchSongs();
-
     });
 
+    /**
+     * This will add function to display the modal of the lyrics and chords of songs to the anchor once it is loaded.
+     */
     $("body").on('DOMSubtreeModified', "#song-table-body", function () {
         $('.view-song').click(function (e) {
             e.preventDefault();
@@ -26,6 +34,9 @@ $(document).ready(function () {
     });
 });
 
+/**
+ * Fetch the result query from the Guitarparty API and display the results in the table.
+ */
 function searchSongs() {
     var searchString = $('#search-text').val();
     $.ajax({
@@ -55,6 +66,9 @@ function searchSongs() {
     });
 }
 
+/**
+ * Add the lyrics and chords to the modal and show the modal.
+ */
 function viewSong(songURL) {
     $.ajax({
         type: "GET",
@@ -67,8 +81,8 @@ function viewSong(songURL) {
             response.authors.forEach(el => {
                 authors += el.name + ",";
             });
-            
-            for(let x = 0; x < response.chords.length; x++){
+
+            for (let x = 0; x < response.chords.length; x++) {
                 debugger;
                 chordList += response.chords[x].name + "\t";
             }
