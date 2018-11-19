@@ -34,9 +34,12 @@
   }
 
   .actives {
-    background-color: green;
+    background-color: rgb(6, 70, 130);
   }
 
+  #par {
+    text-shadow: black 2px 2px;
+  }
   /*
   Style for the image in index.html
   Added by: Gregorio, Marc Lawrence
@@ -52,8 +55,6 @@
     text-align: center;
     position: relative;
   }
-
-
 
   /*
   Style for the text in index.html
@@ -144,9 +145,17 @@
     text-align: left;
     padding: 8px;
   }
-
+  /*
+  Style for the modal for song search
+  Added by: Ballares, Justine Paul
+  Modified by: Gregorio, Marc Lawrence
+  */
   .table {
     width: 80%;
+  }
+
+  .au {
+    color: white;
   }
 
   .view {
@@ -159,8 +168,10 @@
     margin: auto;
     padding: 20px;
     width: 130%;
+    text-align: center;
   }
 
   .modal-header {
-    text-align: center;
+    text-align: left;
+    padding-left 50%;
   }

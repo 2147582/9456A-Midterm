@@ -1,16 +1,16 @@
 [{
-        "question": "<div class='chord-audio' chord='Em'></div>",
+        "question": "<div class='chord-audio' chord='E'></div>",
         "rightAnswer": "Em",
-        "wrongAnswer1": "D",
-        "wrongAnswer2": "G",
+        "wrongAnswer1": "G",
+        "wrongAnswer2": "D",
         "wrongAnswer3": "C"
     },
     {
         "question": "<div class='chord-audio' chord='D'></div>",
         "rightAnswer": "D",
         "wrongAnswer1": "Em",
-        "wrongAnswer2": "G",
-        "wrongAnswer3": "C"
+        "wrongAnswer2": "C",
+        "wrongAnswer3": "G"
     },
     {
         "question": "<div class='chord-audio' chord='G'></div>",
@@ -22,8 +22,8 @@
     {
         "question": "<div class='chord-audio' chord='C'></div>",
         "rightAnswer": "C",
-        "wrongAnswer1": "D",
-        "wrongAnswer2": "G",
+        "wrongAnswer1": "G",
+        "wrongAnswer2": "D",
         "wrongAnswer3": "Em"
     }
 ]

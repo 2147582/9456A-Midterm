@@ -10,7 +10,7 @@ function chordAudio() {
             var chord = $(this).attr('chord');
             var res = chord.replace('#', '%23');
             var htmlContent = '<audio chord="' + chord + '" src="assets/audio/' + res + '.AAC"></audio>';
-            htmlContent += '<a class="btn btn-primary" onclick="play(\'' + chord + '\')">Play</a>';
+            htmlContent += '<a class="btn btn-primary au" onclick="play(\'' + chord + '\')">Play</a>';
             $(this).html(htmlContent);
         });
     });
@@ -22,7 +22,7 @@ function chordAudioQuiz() {
             var chord = $(this).attr('chord');
             var res = chord.replace('#', '%23');
             var htmlContent = '<audio chord="' + chord + '" src="assets/audio/' + res + '.AAC" autoplay></audio>';
-            htmlContent += '<a class="btn btn-primary" onclick="play(\'' + chord + '\')">Play</a>';
+            htmlContent += '<a class="btn btn-primary au" onclick="play(\'' + chord + '\')">Play</a>';
             $(this).html(htmlContent);
         });
     });
