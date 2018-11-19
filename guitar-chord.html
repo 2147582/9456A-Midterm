@@ -18,11 +18,13 @@
 </head>
 
 <body>
-	<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark"> <!-- Added by: Baterina, Albert Lexter | All associated tags in Navbar -->
+	<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+		<!-- Added by: Baterina, Albert Lexter | All associated tags in Navbar -->
 		<a class="navbar-brand" href="index.html">
 			<img src="assets/img/GT.png" style="height: 40px; width: 40px;">
 		</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+		 aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
 		<div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -34,7 +36,8 @@
 					<a class="nav-link" href="introduction.html">Introduction</a>
 				</li>
 				<li class="nav-item dropdown active">
-					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+					 aria-expanded="false">
 						Chords
 					</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -105,11 +108,11 @@
 			Script to add and remove class named actives
 			added by: Gregorio, Marc Lawrence
 			*/
-			$(".ch").click(function() {
+			$(".ch").click(function () {
 				$(".ch").removeClass("actives");
 				$(this).addClass("actives");
 			});
-			$(".va").click(function() {
+			$(".va").click(function () {
 				$(".va").removeClass("actives");
 				$(this).addClass("actives");
 			});
@@ -132,15 +135,18 @@
 			Added by: Ballares, Justine Paul
 			Modified by: Gregorio, Marc Lawrence
 			*/
-			$('.diagram button').each(function() {
-				$(this).click(function(e) {
-					window.setTimeout(function() {
+			/**
+			 * Add function for the buttons for displaying the chords
+			 */
+			$('.diagram button').each(function () {
+				$(this).click(function (e) {
+					window.setTimeout(function () {
 						var selectedChordCanvas = ch + '_' + va;
 						var selectedChord = ch + va;
-						$('.chord-container').html(
-							'<canvas id="chord-content" class="chord" chord="' + selectedChordCanvas +
-							'" width="200" height="200"></canvas>'
-						);
+
+						/**
+						 * Display the selected chord diagram with the play button for the audio
+						 */
 						var htmlContent = '<canvas id="chord-content" class="chord" chord="' + selectedChordCanvas +
 							'" width="180" height="200"></canvas>';
 						htmlContent += '<div class="chord-audio" chord="' + selectedChord + '"></div>';
@@ -151,15 +157,18 @@
 
 				});
 			});
-			$('.var button').each(function() {
-				$(this).click(function(e) {
-					window.setTimeout(function() {
+			/**
+			 * Add function for the buttons for displaying the chord variety
+			 */
+			$('.var button').each(function () {
+				$(this).click(function (e) {
+					window.setTimeout(function () {
 						var selectedChordCanvas = ch + '_' + va;
 						var selectedChord = ch + va;
-						$('.chord-container').html(
-							'<canvas id="chord-content" class="chord" chord="' + selectedChordCanvas +
-							'" width="200" height="200"></canvas>'
-						);
+
+						/**
+						 * Display the selected chord diagram with the play button for the audio
+						 */
 						var htmlContent = '<canvas id="chord-content" class="chord" chord="' + selectedChordCanvas +
 							'" width="180" height="200"></canvas>';
 						htmlContent += '<br><div class="chord-audio" chord="' + selectedChord + '"></div>';
