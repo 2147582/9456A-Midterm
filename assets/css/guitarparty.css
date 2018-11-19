@@ -1,3 +1,8 @@
+/*
+Used to fix display of lyrics and chords returned by guitarparty
+Added by: Ballares, Justine
+*/
+
 .chordline span strong span {
     display: none;
 }
